@@ -1,0 +1,31 @@
+PlayerClassData
+{
+	"Model"			"models/player/gestir/gestir.mdl"
+	"GibDir"		"models/player/gestir/gibs"
+	
+	"MaxSpeed"		"210"
+	
+	"MaxHealth"		"115"
+	"SpawnHealth"		"115"
+	
+	"MaxArmor"		"120"
+	"SpawnArmor"		"120"
+
+	"MaxSpecial"		"185"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_spear"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_seaxshield"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_javelin"
+		"ExtraAmmo"	"2"
+	}
+}

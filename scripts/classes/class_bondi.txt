@@ -1,0 +1,33 @@
+PlayerClassData
+{
+	"Model"			"models/player/bondi/bondi.mdl"
+	"GibDir"		"models/player/bondi/gibs"
+	
+	"MaxSpeed"		"210"
+	
+	"MaxHealth"		"110"
+	"SpawnHealth"		"110"
+	
+	"MaxArmor"		"90"
+	"SpawnArmor"		"90"
+
+	"MaxSpecial"		"210"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_seax"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_atlatl"
+		"ExtraAmmo"	"2"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_flatbow"
+		"ExtraAmmo"	"20"
+	}
+
+}

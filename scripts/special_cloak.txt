@@ -1,0 +1,7 @@
+ScriptableData
+{
+	"SpecialDuration"		"6.0"	// Special duration
+	"SpecialSpeedup"		"1.35"	// Speed modifier during the special
+	"SpecialRange"			"100.0"	// Stun radius
+	"SpecialDamage"			"3"		// Explosion damage
+}

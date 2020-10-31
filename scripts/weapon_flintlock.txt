@@ -1,0 +1,78 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_Pistol"
+	"viewmodel"			"models/weapons/pistol.mdl"
+	"playermodel"			"models/weapons/w_pistol/w_pistol.mdl"
+	"PlayerAnimationExtension"	"flintlock"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"1"
+	"bucket_position"		"7"
+
+	"clip_size"				"6"
+	"primary_ammo"			"AMMO_FLINTLOCK"
+	"secondary_ammo"		"None"
+
+	"weight"				"2"
+	"item_flags"			"6"
+
+	"damage"			"40"
+	"HeadshotDamage"		"16"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_Flintlock.Single"
+		"reload"		"Weapon_Flintlock.Reload"
+		"melee_hit"		"Weapon_Crowbar.Melee_Hit"
+		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
+		"draw"			"Weapon_Flintlock.Draw"
+		"holster"		"Weapon_Flintlock.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/pistol"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"128"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/pistol"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"128"
+		}
+		"ammo"
+		{
+				"file"		"HUD/pistolammo"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"128"
+		}
+		"ammo2"
+		{
+			"file"		"HUD/pistolammoballs"
+			"x"			"0"
+			"y"			"0"
+			"width"		"128"
+			"height"	"128"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"51"
+			"y"			"6"
+			"width"		"38"
+			"height"	"38"
+		}
+	}
+}

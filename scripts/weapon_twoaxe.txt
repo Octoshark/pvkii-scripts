@@ -1,0 +1,178 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#ClassMenu_TwoAxe"
+	"viewmodel"				"models/weapons/2haxe.mdl"
+	"playermodel"			"models/weapons/w_2haxe/W_2haxe.mdl"
+	"PlayerAnimationExtension"	"2haxe"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"0"
+	"bucket_position"		"10"
+
+	"clip_size"				"-1"
+	"primary_ammo"			"None"
+	"secondary_ammo"		"None"
+
+	"weight"				"3"
+	"item_flags"			"0"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_HusAxe.Single"
+		"melee_hit"			"Weapon_Crowbar.Melee_Hit"
+		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
+		"draw"			"Weapon_HusAxe.Draw"
+		"holster"		"Weapon_HusAxe.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/2haxe"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"128"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/2haxe"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"128"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIcons"
+				"character"	"c"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+	}
+	
+	MeleeWeaponData
+	{
+		"Range"				"63"	// The maximum range this weapon can reach in hl2 units
+
+		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
+		// get stunned by bigger weapons.
+		"Weight"			"large"
+		
+		"ViewEffectScale"	"2.5"
+		
+		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
+		// The damage values for individual hittraces are calculated based on this value in a linear
+		// manner, the first and last hittraces deal the least damage, while the middle hittrace
+		// (which is usually in the middle of the screen) deals the most damage.
+		
+		// Also note that charging the attack (holding the attack for 1 second) increases the 
+		// maximum damage by 20%
+		"TotalDamage"		"69" 
+
+		// These multipliers can be used to fine tune the speeds of different parts of the attack.
+		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.
+		"StartAttackSpeed"	"0.65"	// 1
+		"SwingSpeed"		"1.2"	// 2
+		"AttackSpeed"		"0.95"	// 2 and 3
+		
+		"forward"
+		{
+			"TraceStart"		"0.16" // Time in seconds, relative to the attack animation (Frame/FPS)
+			"TraceEnd"			"0.32"
+			"TraceDir"			"forward"
+			"DamageMultiplier"	"1.0"
+			"StartActivity"		"ACT_VM_ATTACK_FORWARD_START"
+			"StartDuration"		"0.46"
+			"Activity"			"ACT_VM_ATTACK_FORWARD"
+			"Duration"			"1.0"
+		}
+
+		"blockatk_forward"
+		{
+			"TraceStart"		"0.53"
+			"TraceEnd"			"0.77"
+			"TraceDir"			"forward"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
+			"Duration"			"1.25"
+		}
+		
+		"back"
+		{
+			"TraceStart"		"0.16"
+			"TraceEnd"			"0.32"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"0.9"
+			"StartActivity"		"ACT_VM_ATTACK_BACK_START"
+			"StartDuration"		"0.46"
+			"Activity"			"ACT_VM_ATTACK_BACK"
+			"Duration"			"1.0"
+		}
+
+		"blockatk_back"
+		{
+			"TraceStart"		"0.53"
+			"TraceEnd"			"0.77"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_BACK"
+			"Duration"			"1.25"
+		}
+		
+		"left"
+		{
+			"TraceStart"		"0.16"
+			"TraceEnd"			"0.32"
+			"TraceDir"			"left"
+			"DamageMultiplier"	"1.0"
+			"StartActivity"		"ACT_VM_ATTACK_LEFT_START"
+			"StartDuration"		"0.46"
+			"Activity"			"ACT_VM_ATTACK_LEFT"
+			"Duration"			"1.0"
+		}
+
+		"blockatk_left"
+		{
+			"TraceStart"		"0.53"
+			"TraceEnd"			"0.77"
+			"TraceDir"			"left"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_LEFT"
+			"Duration"			"1.25"
+		}
+		
+		"right"
+		{
+			"TraceStart"		"0.16"
+			"TraceEnd"			"0.32"
+			"TraceDir"			"right"
+			"DamageMultiplier"	"1.0"
+			"StartActivity"		"ACT_VM_ATTACK_RIGHT_START"
+			"StartDuration"		"0.46"
+			"Activity"			"ACT_VM_ATTACK_RIGHT"
+			"Duration"			"1.0"
+		}
+
+		"blockatk_right"
+		{
+			"TraceStart"		"0.53"
+			"TraceEnd"			"0.77"
+			"TraceDir"			"right"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_RIGHT"
+			"Duration"			"1.25"
+		}
+
+	}
+}

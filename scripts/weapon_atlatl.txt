@@ -1,0 +1,87 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_atlatl"
+	"viewmodel"			"models/weapons/atlatl.mdl"
+	"playermodel"			"models/weapons/w_atlatl/w_atlatl.mdl"
+	"PlayerAnimationExtension"	"atlatl"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"1"
+	"bucket_position"		"0"
+
+	"clip_size"			"-1"
+	"primary_ammo"			"AMMO_ATLATL"
+	"secondary_ammo"		"None"
+
+	"weight"				"1"
+	"item_flags"			"4"
+
+	"damage"			"85"
+	
+	"SpecialDamage"			"105"
+	
+	// Projectile settings
+	"Gravity"			"1.1"
+	"MaxVelocity"		"3000"
+
+	// Atlatl specific
+	"AtlatlChargeSpeed"			"2.8" // Charge speed multiplier
+	"AtlatlChargeDecayStart"	"0" // Start decaying n seconds after hitting full charge
+	"AtlatlChargeDecayEnd"		"0.8" // Previous Value: (1.5)
+	"AtlatlBlindFireModifier"		"1.0" // Damage modifier for blind fire shot
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_BondiJavelin.Throw"
+		"reload"		"Weapon_BondiJavelin.Draw"
+		"draw"			"Weapon_BondiJavelin.Draw"
+		"holster"		"Weapon_BondiJavelin.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/atlatl"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"128"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/atlatl"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"128"
+		}
+		"ammo"
+		{
+				"file"		"HUD/atlatlammo"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"24"
+			"y"			"-24"
+			"width"		"24"
+			"height"	"72"
+		}
+	}
+}

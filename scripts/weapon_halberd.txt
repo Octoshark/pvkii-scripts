@@ -1,0 +1,186 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_Halberd"
+	"viewmodel"			"models/weapons/halberd.mdl"
+	"playermodel"			"models/weapons/w_halberd/w_halberd.mdl"
+	"PlayerAnimationExtension"	"halberd"
+
+	"anim_prefix"			"anim"
+	"bucket"			"0"
+	"bucket_position"		"6"
+
+	"clip_size"				"-1"
+	"primary_ammo"			"None"
+	"secondary_ammo"		"None"
+
+	"weight"				"5"
+	"item_flags"			"0"
+
+	"SpecialDamage"			"2.0"	// Fart cloud damage taken every 0.5 seconds
+	"SpecialWarmup"			"1.0"	// Fart cloud special warm up time
+	"SpecialDuration"		"5.0"	// Fart cloud special duration
+	"SpecialRange"			"120.0"	// Fart cloud range
+	"SpecialLinger"			"1.5"	// Fart cloud linger time
+	"SpecialSpeedup"		"1.2"	// Speed modifier during the special
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_HusAxe.Single"
+		"melee_hit"			"Weapon_Crowbar.Melee_Hit"
+		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
+		"draw"			"Weapon_HusAxe.Draw"
+		"holster"		"Weapon_HusAxe.Holster"
+		"special1"		"Weapon_Halberd.SpecialHit"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/halberd"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"64"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/halberd"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"64"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIcons"
+				"character"	"c"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+	}
+
+	MeleeWeaponData
+	{
+		"Range"				"80"	// The maximum range this weapon can reach in hl2 units
+		"FireRate"			"0.6"	// Length of the attack animation in seconds
+
+		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
+		// get stunned by bigger weapons.
+		"Weight"			"medium"
+
+		"ViewEffectScale"	"0.5"
+
+		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
+		// The damage values for individual hittraces are calculated based on this value in a linear
+		// manner, the first and last hittraces deal the least damage, while the middle hittrace
+		// (which is usually in the middle of the screen) deals the most damage.
+
+		// Also note that charging the attack (holding the attack for 1 second) increases the
+		// maximum damage by 20%
+		"TotalDamage"		"48"
+
+		// These multipliers can be used to fine tune the speeds of different parts of the attack.
+		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.
+		"StartAttackSpeed"	"0.7"	// 1
+		"SwingSpeed"		"1.5"	// 2
+		"AttackSpeed"		"0.7"	// 2 and 3
+
+		"forward"
+		{
+			"TraceStart"		"0.15" // Time in seconds, relative to the attack animation (Frame/FPS)
+			"TraceEnd"			"0.30"
+			"TraceDir"			"forward"
+			"DamageMultiplier"	"1.2"
+			"StartActivity"		"ACT_VM_ATTACK_FORWARD_START"
+			"StartDuration"		"0.45"
+			"Activity"			"ACT_VM_ATTACK_FORWARD"
+			"Duration"			"0.9"
+		}
+
+		"back"
+		{
+			"TraceStart"		"0.15"
+			"TraceEnd"			"0.30"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"1.1"
+			"StartActivity"		"ACT_VM_ATTACK_BACK_START"
+			"StartDuration"		"0.45"
+			"Activity"			"ACT_VM_ATTACK_BACK"
+			"Duration"			"0.9"
+		}
+
+		"left"
+		{
+			"TraceStart"		"0.15"
+			"TraceEnd"			"0.30"
+			"TraceDir"			"left"
+			"DamageMultiplier"	"1.03"
+			"StartActivity"		"ACT_VM_ATTACK_RIGHT_START"
+			"StartDuration"		"0.35"
+			"Activity"			"ACT_VM_ATTACK_RIGHT"
+			"Duration"			"0.76"
+		}
+
+		"right"
+		{
+			"TraceStart"		"0.15"
+			"TraceEnd"			"0.30"
+			"TraceDir"			"right"
+			"DamageMultiplier"	"1.03"
+			"StartActivity"		"ACT_VM_ATTACK_LEFT_START"
+			"StartDuration"		"0.35"
+			"Activity"			"ACT_VM_ATTACK_LEFT"
+			"Duration"			"0.76"
+		}
+
+		"blockatk_forward"
+		{
+			"TraceStart"		"0.39"
+			"TraceEnd"			"0.54"
+			"TraceDir"			"forward"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
+			"Duration"			"1.2"
+		}
+
+		"blockatk_back"
+		{
+			"TraceStart"		"0.39"
+			"TraceEnd"			"0.54"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_BACK"
+			"Duration"			"1.2"
+		}
+
+		"blockatk_left"
+		{
+			"TraceStart"		"0.39"
+			"TraceEnd"			"0.54"
+			"TraceDir"			"left"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_LEFT"
+			"Duration"			"1.2"
+		}
+
+		"blockatk_right"
+		{
+			"TraceStart"		"0.39"
+			"TraceEnd"			"0.54"
+			"TraceDir"			"right"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_RIGHT"
+			"Duration"			"1.2"
+		}
+	}
+}

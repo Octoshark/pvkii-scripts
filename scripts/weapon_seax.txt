@@ -1,0 +1,177 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#ClassMenu_Seax"
+	"viewmodel"				"models/weapons/bondiseax.mdl"
+	"playermodel"			"models/weapons/w_bondiseax/w_bondiseax.mdl"
+	"PlayerAnimationExtension"	"seax"
+	
+	//"anim_prefix"			"knife"
+	"bucket"			"0"
+	"bucket_position"		"7"
+
+	"clip_size"				"-1"
+	"primary_ammo"			"None"
+	"secondary_ammo"		"None"
+
+	"weight"				"0"
+	"item_flags"			"0"
+
+	"damage"				"40"
+	
+	"SpecialDamage"			"4" // Poison damage
+	"SpecialDuration"		"8" // Poison duration
+	"SpecialFrequency"		"1" // Poison damage frequency
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_Blade.Bondi"
+		"melee_hit"		"Weapon_Crowbar.Melee_Hit"
+		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
+		"draw"			"Weapon_Seax.Draw"
+		"holster"		"Weapon_Seax.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/bondiseax"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"128"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/bondiseax"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"128"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIcons"
+				"character"	"c"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+	}
+	
+	MeleeWeaponData
+	{
+		"Range"				"50"	// The maximum range this weapon can reach in hl2 units
+
+		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
+		// get stunned by bigger weapons.
+		"Weight"			"medium"
+		
+		"ViewEffectScale"	"1.0"
+		
+		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
+		// The damage values for individual hittraces are calculated based on this value in a linear
+		// manner, the first and last hittraces deal the least damage, while the middle hittrace
+		// (which is usually in the middle of the screen) deals the most damage.
+		
+		// Also note that charging the attack (holding the attack for 1 second) increases the 
+		// maximum damage by 20%
+		"TotalDamage"		"45" 
+		
+		"forward"
+		{
+			"TraceStart"		"0.09" // Time in seconds, relative to the attack animation (Frame/FPS)
+			"TraceEnd"			"0.17"
+			"TraceDir"			"forward"
+			"DamageMultiplier"	"1.13"
+			"StartActivity"		"ACT_VM_ATTACK_FORWARD_START"
+			"StartDuration"		"0.54"
+			"Activity"			"ACT_VM_ATTACK_FORWARD"
+			"Duration"			"0.51"
+		}
+		
+		"back"
+		{
+			"TraceStart"		"0.07"
+			"TraceEnd"			"0.15"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"0.9"
+			"StartActivity"		"ACT_VM_ATTACK_BACK_START"
+			"StartDuration"		"0.26"
+			"Activity"			"ACT_VM_ATTACK_BACK"
+			"Duration"			"0.56"
+		}
+		
+		"left"
+		{
+			"TraceStart"		"0.09"
+			"TraceEnd"			"0.17"
+			"TraceDir"			"left"
+			"DamageMultiplier"	"1.0"
+			"StartActivity"		"ACT_VM_ATTACK_LEFT_START"
+			"StartDuration"		"0.26"
+			"Activity"			"ACT_VM_ATTACK_LEFT"
+			"Duration"			"0.56"
+		}
+		
+		"right"
+		{
+			"TraceStart"		"0.09"
+			"TraceEnd"			"0.17"
+			"TraceDir"			"right"
+			"DamageMultiplier"	"1.0"
+			"StartActivity"		"ACT_VM_ATTACK_RIGHT_START"
+			"StartDuration"		"0.26"
+			"Activity"			"ACT_VM_ATTACK_RIGHT"
+			"Duration"			"0.56"
+		}
+		
+		"blockatk_forward"
+		{
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.50"
+			"TraceDir"			"forward"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
+			"Duration"			"1.0"
+		}
+		
+		"blockatk_back"
+		{
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.50"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_BACK"
+			"Duration"			"1.0"
+		}
+		
+		"blockatk_left"
+		{
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.50"
+			"TraceDir"			"right"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_LEFT"
+			"Duration"			"1.0"
+		}
+		
+		"blockatk_right"
+		{
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.50"
+			"TraceDir"			"left"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_RIGHT"
+			"Duration"			"1.0"
+		}
+	}
+}

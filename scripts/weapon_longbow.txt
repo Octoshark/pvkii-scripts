@@ -1,0 +1,80 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_Longbow"
+	"viewmodel"			"models/weapons/longbow.mdl"
+	"playermodel"			"models/weapons/w_longbow/w_longbow.mdl"
+	"PlayerAnimationExtension"	"bow"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"2"
+	"bucket_position"		"6"
+
+	"clip_size"			"-1"
+	"primary_ammo"			"AMMO_ARROWS"
+	"secondary_ammo"		"None"
+
+	"weight"				"5"
+	"item_flags"			"4"
+
+	"damage"			"80"
+	"SpecialDamage"			"120" // * 3
+	
+	// Projectile settings
+	"Gravity"			"0.9"
+	"MaxVelocity"		"2500"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_Longbow.Pullback"
+		"reload"		"Weapon_Longbow.Shoot"
+		"draw"			"Weapon_Longbow.Draw"
+		"holster"		"Weapon_Longbow.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/longbow"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"128"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/longbow"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"128"
+		}
+		"ammo"
+		{
+				"file"		"HUD/longbowammo"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"24"
+			"y"			"-24"
+			"width"		"24"
+			"height"	"72"
+		}
+	}
+}

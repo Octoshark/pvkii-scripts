@@ -1,0 +1,9 @@
+ScriptableData
+{
+	"SpecialDamage"			"2.0"	// Fart cloud damage taken every 0.5 seconds
+	"SpecialWarmup"			"1.0"	// Fart cloud special warm up time
+	"SpecialDuration"		"5.0"	// Fart cloud special duration
+	"SpecialRange"			"120.0"	// Fart cloud range
+	"SpecialLinger"			"1.5"	// Fart cloud linger time
+	"SpecialSpeedup"		"1.2"	// Speed modifier during the special
+}

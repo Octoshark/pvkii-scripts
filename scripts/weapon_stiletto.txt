@@ -1,0 +1,187 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#ClassMenu_Stiletto"
+	"viewmodel"				"models/weapons/stiletto.mdl"
+	"playermodel"			"models/weapons/w_stiletto/w_stiletto.mdl"
+	"PlayerAnimationExtension"	"stiletto"
+	
+	//"anim_prefix"			"knife"
+	"bucket"			"0"
+	"bucket_position"		"0"
+
+	"clip_size"				"-1"
+	"primary_ammo"			"None"
+	"secondary_ammo"		"None"
+
+	"weight"				"2"
+	"item_flags"			"0"
+	
+	"SpecialDamage"			"85"
+	"PlayerSpeedSpecial"	"260"
+	
+	"SpecialBackstabMultiplier" "1.9"
+	"BackstabMultiplier" "1.98"
+
+	"SpecialWarmup" "0.5" // Special Charge Time in Seconds
+	"SpecialRange"	"70" // How far the special attack extends
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_Stiletto"
+		"melee_hit"		"Weapon_Crowbar.Melee_Hit"
+		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
+		"draw"			"Weapon_Stiletto.Draw"
+		"holster"		"Weapon_Stiletto.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/stiletto"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"128"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/stiletto"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"128"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIcons"
+				"character"	"c"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+	}
+	
+	MeleeWeaponData
+	{
+		"Range"				"48"	// The maximum range this weapon can reach in hl2 units
+
+		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
+		// get stunned by bigger weapons.
+		"Weight"			"medium"
+		
+		"ViewEffectScale"	"1.0"
+		
+		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
+		// The damage values for individual hittraces are calculated based on this value in a linear
+		// manner, the first and last hittraces deal the least damage, while the middle hittrace
+		// (which is usually in the middle of the screen) deals the most damage.
+		
+		// Also note that charging the attack (holding the attack for 1 second) increases the 
+		// maximum damage by 20%
+		"TotalDamage"		"38" 
+
+		// These multipliers can be used to fine tune the speeds of different parts of the attack.
+		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.
+		"StartAttackSpeed"	"1.0"	// 1
+		"SwingSpeed"		"0.9"	// 2
+		"AttackSpeed"		"1.25"	// 2 and 3
+		
+		
+		"forward"
+		{
+			"TraceStart"		"0.09" // Time in seconds, relative to the attack animation (Frame/FPS)
+			"TraceEnd"			"0.17"
+			"TraceDir"			"forward"
+			"DamageMultiplier"	"1.0"
+			"StartActivity"		"ACT_VM_ATTACK_FORWARD_START"
+			"StartDuration"		"0.20"
+			"Activity"			"ACT_VM_ATTACK_FORWARD"
+			"Duration"			"0.65"
+		}
+		
+		"back"
+		{
+			"TraceStart"		"0.09"
+			"TraceEnd"			"0.22"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"0.9"
+			"StartActivity"		"ACT_VM_ATTACK_BACK_START"
+			"StartDuration"		"0.20"
+			"Activity"			"ACT_VM_ATTACK_BACK"
+			"Duration"			"0.65"
+		}
+		
+		"left"
+		{
+			"TraceStart"		"0.09"
+			"TraceEnd"			"0.17"
+			"TraceDir"			"left"
+			"DamageMultiplier"	"1.0"
+			"StartActivity"		"ACT_VM_ATTACK_LEFT_START"
+			"StartDuration"		"0.20"
+			"Activity"			"ACT_VM_ATTACK_LEFT"
+			"Duration"			"0.65"
+		}
+		
+		"right"
+		{
+			"TraceStart"		"0.09"
+			"TraceEnd"			"0.17"
+			"TraceDir"			"right"
+			"DamageMultiplier"	"1.0"
+			"StartActivity"		"ACT_VM_ATTACK_RIGHT_START"
+			"StartDuration"		"0.20"
+			"Activity"			"ACT_VM_ATTACK_RIGHT"
+			"Duration"			"0.65"
+		}
+		
+		"blockatk_forward"
+		{
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.50"
+			"TraceDir"			"forward"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
+			"Duration"			"1.0"
+		}
+		
+		"blockatk_back"
+		{
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.50"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_BACK"
+			"Duration"			"1.0"
+		}
+		
+		"blockatk_left"
+		{
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.50"
+			"TraceDir"			"left"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_LEFT"
+			"Duration"			"1.0"
+		}
+		
+		"blockatk_right"
+		{
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.50"
+			"TraceDir"			"right"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_RIGHT"
+			"Duration"			"1.0"
+		}
+	}
+}

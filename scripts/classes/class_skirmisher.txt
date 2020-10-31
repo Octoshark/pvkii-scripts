@@ -1,0 +1,31 @@
+PlayerClassData
+{
+	"Model"			"models/player/skirmisher/skirmisher.mdl"
+	"GibDir"		"models/player/skirmisher/gibs"
+	
+	"MaxSpeed"		"260"
+	
+	"MaxHealth"		"100"
+	"SpawnHealth"		"100"
+	
+	"MaxArmor"		"90"
+	"SpawnArmor"		"90"
+
+	"MaxSpecial"		"165"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_cutlass"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_flintlock"
+		"ExtraAmmo"	"0"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_powderkeg"
+	}
+}

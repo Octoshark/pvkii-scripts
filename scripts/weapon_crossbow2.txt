@@ -1,0 +1,87 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_Crossbow"
+	"viewmodel"			"models/weapons/crossbow_maa.mdl"
+	"playermodel"			"models/weapons/w_crossbow/w_crossbow_maa.mdl"
+	"PlayerAnimationExtension"	"crossbow"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"2"
+	"bucket_position"		"1"
+
+	"clip_size"			"-1"
+	"primary_ammo"			"AMMO_BOLTS_MAA"
+	"secondary_ammo"		"None"
+
+	"weight"				"1"
+	"item_flags"			"6"
+
+	"damage"			"70"
+	
+	// Projectile settings
+	"Gravity"			"0.9"
+	"MaxVelocity"		"2600"
+	
+	"SpecialDamage"			"2.0"	// Fart cloud damage taken every 0.5 seconds
+	"SpecialWarmup"			"1.0"	// Fart cloud special warm up time
+	"SpecialDuration"		"5.0"	// Fart cloud special duration
+	"SpecialRange"			"120.0"	// Fart cloud range
+	"SpecialLinger"			"1.5"	// Fart cloud linger time
+	"SpecialSpeedup"		"1.2"	// Speed modifier during the special
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_Crossbow2.Single"
+		"reload"		"Weapon_Crossbow2.Reload"
+		"draw"			"Weapon_Crossbow.Draw"
+		"holster"		"Weapon_Crossbow.Holster"
+		"special1"		"Weapon_Halberd.SpecialHit"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/crossbow2"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"256"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/crossbow2"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"256"
+		}
+		"ammo"
+		{
+				"file"		"HUD/crossbowammo"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"24"
+			"y"			"-24"
+			"width"		"24"
+			"height"	"72"
+		}
+	}
+}

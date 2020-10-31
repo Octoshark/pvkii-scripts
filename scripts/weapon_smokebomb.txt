@@ -1,0 +1,51 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_Smokebomb"
+	"viewmodel"				"models/weapons/v_smokebomb.mdl"
+	"playermodel"			"models/weapons/w_smokebomb/w_smokebomb.mdl"
+	"PlayerAnimationExtension"	"smokebomb"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"3"
+	"bucket_position"		"0"
+
+	"clip_size"				"-1"
+	"clip2_size"			"-1"
+	"default_clip"			"1"
+	"default_clip2"			"-1"
+
+	"primary_ammo"			"None"
+	"secondary_ammo"		"None"
+
+	"weight"			"1"
+	"item_flags"			"2"	// ITEM_FLAG_NOAUTORELOAD
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"draw"		"Weapon_SmokeBomb.Draw"
+		"single_shot"	"Weapon_SmokeBomb.Single"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/keg"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"256"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/keg"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"256"
+		}
+	}
+}

@@ -1,0 +1,71 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_Blunderbuss"
+	"viewmodel"			"models/weapons/blunderbus.mdl"
+	"playermodel"			"models/weapons/w_blunderbus/w_blunderbus.mdl"
+	"PlayerAnimationExtension"	"blunderbus"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"1"
+	"bucket_position"		"2"
+	"DeployDelay"			"0.25"
+
+	"clip_size"				"-1"
+	"primary_ammo"			"AMMO_BLUNDERBUSS"
+	"secondary_ammo"		"None"
+
+	"weight"				"2"
+	"item_flags"			"6"
+
+	"damage"			"6"
+        "HeadshotDamage"		"2"
+	"spread"			"30" // Bullet spread in degrees
+	"SpecialDamage"			"125"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_Blunderbuss.Single"
+		"reload"		"Weapon_Blunderbuss.Reload"
+		"draw"			"Weapon_Blunderbuss.Draw"
+		"holster"		"Weapon_Blunderbuss.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/blunderbuss"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"128"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/blunderbuss"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"128"
+		}
+		"ammo"
+		{
+				"file"		"HUD/pistolammoballs"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"51"
+			"y"			"6"
+			"width"		"38"
+			"height"	"38"
+		}
+	}
+}

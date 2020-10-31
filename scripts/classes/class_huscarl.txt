@@ -1,0 +1,31 @@
+PlayerClassData
+{
+	"Model"			"models/player/huscarl/huscarl.mdl"
+	"GibDir"		"models/player/huscarl/gibs"
+	
+	"MaxSpeed"		"200"
+	
+	"MaxHealth"		"130"
+	"SpawnHealth"		"130"
+	
+	"MaxArmor"		"170"
+	"SpawnArmor"		"170"
+
+	"MaxSpecial"		"200"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_twoaxe"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_vikingshield"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_throwaxe"
+		"ExtraAmmo"	"4"
+	}
+}

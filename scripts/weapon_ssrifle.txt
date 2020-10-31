@@ -1,0 +1,81 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_SniperRifle"
+	"viewmodel"			"models/weapons/musket.mdl"
+	"playermodel"			"models/weapons/w_musket/w_musket.mdl"
+	"PlayerAnimationExtension"	"musket"
+
+	"anim_prefix"			"anim"
+	"bucket"			"2"
+	"bucket_position"		"9"
+
+	"clip_size"			"-1"
+	"primary_ammo"			"AMMO_SNIPER"
+	"secondary_ammo"		"None"
+
+	"weight"				"1"
+	"item_flags"			"6"
+
+	"damage"			"100"
+
+	"BulletSpeed"		"6000"
+	"BulletDrop"		"80"
+
+	"SpecialDamage"			"115"
+	"MaxVelocity"			"800"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_SSRifle.Single"
+		"reload"		"Weapon_SSRifle.Reload"
+		"draw"			"Weapon_SSRifle.Draw"
+		"holster"		"Weapon_SSRifle.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/musket"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"256"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/musket"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"256"
+		}
+		"ammo"
+		{
+				"file"		"HUD/musketammo"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"48"
+			"y"			"48"
+			"width"		"24"
+			"height"	"24"
+		}
+	}
+}

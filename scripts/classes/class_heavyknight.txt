@@ -1,0 +1,25 @@
+PlayerClassData
+{
+	"Model"			"models/player/heavyknight/heavyknight.mdl"
+	"GibDir"		"models/player/heavyknight/gibs"
+	
+	"MaxSpeed"		"190"
+	
+	"MaxHealth"		"130"
+	"SpawnHealth"		"130"
+	
+	"MaxArmor"		"215"
+	"SpawnArmor"		"215"
+
+	"MaxSpecial"		"260"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_twosword"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_swordshield"
+	}
+}

@@ -1,0 +1,25 @@
+PlayerClassData
+{
+	"Model"			"models/player/berserker/berserker.mdl"
+	"GibDir"		"models/player/berserker/gibs"
+	
+	"MaxSpeed"		"235"
+	
+	"MaxHealth"		"155"
+	"SpawnHealth"		"155"
+	
+	"MaxArmor"		"100"
+	"SpawnArmor"		"100"
+
+	"MaxSpecial"		"190"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_bigaxe"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_axesword"
+	}
+}

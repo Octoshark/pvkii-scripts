@@ -1,0 +1,18 @@
+ScriptableData
+{
+	// The damage and velocity of the arrow uses a separate configuration from the standard arrows
+	"SpecialArrowDamage"	"65"
+	"SpecialArrowGravity"	"0.8"
+	"SpecialArrowMaxVelocity"	"2950"
+	
+	// Hunter state
+	"SpecialDuration"	"1.45" // The Hunter state lasts for X seconds.
+	"SpecialFireRate"	"0.17" // Cooldown between firing each arrow so they can't spam it
+	"SpecialArrowsLimit"	"5" // After firing X arrows, the Hunter state ends
+	"SpecialSpeedup"	"0.72" // Speed modifier during the special
+	
+	// Combo bonus
+	"SpecialComboBonus"	"1.05" // Combo bonus dmg scale, multiplies on combo hits
+	"SpecialComboLimit"	"4"	// Max hits for combo bonus
+	"SpecialComboResetTime"	"1.0" // Combo reset time
+}

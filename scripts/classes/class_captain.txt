@@ -1,0 +1,32 @@
+PlayerClassData
+{
+	"Model"			"models/player/captain/captain.mdl"
+	"GibDir"		"models/player/captain/gibs"
+	
+	"MaxSpeed"		"210"
+	
+	"MaxHealth"		"125"
+	"SpawnHealth"		"125"
+	
+	"MaxArmor"		"160"
+	"SpawnArmor"		"160"
+
+	"MaxSpecial"		"190"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_cutlass2"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_blunderbuss"
+		"ExtraAmmo"	"4"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_parrot"
+		"ExtraAmmo"	"1"
+	}
+}

@@ -1,0 +1,32 @@
+PlayerClassData
+{
+	"Model"			"models/player/sharpshooter/sharpshooter.mdl"
+	"GibDir"		"models/player/sharpshooter/gibs"
+	
+	"MaxSpeed"		"210"
+	
+	"MaxHealth"		"100"
+	"SpawnHealth"		"100"
+	
+	"MaxArmor"		"80"
+	"SpawnArmor"		"80"
+
+	"MaxSpecial"		"165"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_ssrifle"
+		"ExtraAmmo"	"5"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_ssflintlock"
+		"ExtraAmmo"	"15"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_dagger"
+	}
+}

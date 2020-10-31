@@ -1,0 +1,54 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_Caltrops"
+	"viewmodel"				"models/weapons/v_caltrops.mdl"
+	"playermodel"			"models/weapons/w_assassin_bag/w_assassin_bag.mdl"
+	"PlayerAnimationExtension"	"caltrops"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"2"
+	"bucket_position"		"0"
+
+	"clip_size"				"-1"
+	"clip2_size"			"-1"
+	"default_clip"			"1"
+	"default_clip2"			"-1"
+
+	"primary_ammo"			"AMMO_CALTROPS"
+	"secondary_ammo"		"None"
+	
+	"damage"			"5"
+
+	"weight"			"0"
+	"item_flags"			"2"	// ITEM_FLAG_NOAUTORELOAD
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"	"Weapon_Caltrops.Single"
+		"draw"		"Weapon_Caltrops.Draw"
+		"holster"	"Weapon_Caltrops.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/caltrops"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"256"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/caltrops"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"256"
+		}
+	}
+}

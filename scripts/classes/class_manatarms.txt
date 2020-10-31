@@ -1,0 +1,32 @@
+PlayerClassData
+{
+	"Model"			"models/player/manatarms/manatarms.mdl"
+	"GibDir"		"models/player/manatarms/gibs"
+	
+	"MaxSpeed"		"225"
+	
+	"MaxHealth"		"105"
+	"SpawnHealth"		"105"
+	
+	"MaxArmor"		"130"
+	"SpawnArmor"		"130"
+
+	"MaxSpecial"		"210"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_halberd"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_maceshield"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_crossbow2"
+		"ExtraAmmo"	"2"
+	}
+
+}

@@ -1,0 +1,32 @@
+PlayerClassData
+{
+	"Model"			"models/player/bowman/bowman.mdl"
+	"GibDir"		"models/player/bowman/gibs"
+	
+	"MaxSpeed"		"210"
+	
+	"MaxHealth"		"100"
+	"SpawnHealth"		"100"
+	
+	"MaxArmor"		"80"
+	"SpawnArmor"		"80"
+
+	"MaxSpecial"		"165"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_archersword"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_crossbow"
+		"ExtraAmmo"	"5"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_longbow"
+		"ExtraAmmo"	"20"
+	}
+}
