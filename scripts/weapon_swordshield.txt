@@ -66,13 +66,14 @@ WeaponData
 	
 	MeleeWeaponData
 	{
-		"Range" 			"50"	// The maximum range this weapon can reach in hl2 units
-		"ShieldRange"		"50"	// The maximum range this shield can reach in hl2 units
-		"FireRate"			"0.53"	// Length of the attack animation in seconds
+		"Range" 			"60"	// The maximum range this weapon can reach in hl2 units
+		"ShieldRange"		"55"	// The maximum range this shield can reach in hl2 units
+		"FireRate"			"0.58"	// Length of the attack animation in seconds
+		"BashDamage"		"10"	// Base shield bash damage
 		
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
-		"Weight"			"medium"
+		"Weight"		"medium"
 		
 		"ViewEffectScale"	"1.0"
 		
@@ -83,10 +84,10 @@ WeaponData
 		
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
-		"TotalDamage"		"40" 
+		"TotalDamage"		"46" 
 		
 		// Shield hitpoints
-		"ShieldStrength"	"300"
+		"ShieldStrength"	"350"
 		
 		"forward"
 		{

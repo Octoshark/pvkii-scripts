@@ -20,8 +20,8 @@ WeaponData
 	"damage"			"40"
 	
 	// Projectile settings
-	"Gravity"			"1"
-	"MaxVelocity"		"2300"
+	"Gravity"			"1.4"
+	"MaxVelocity"		"2600"
 	
 	// Player Speed when in sniper mode and reloading
 	"PlayerSpeedSniper"		"160"

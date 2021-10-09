@@ -73,7 +73,7 @@ WeaponData
 		
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
-		"Weight"			"large"
+		"Weight"		"large"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
 		// The damage values for individual hittraces are calculated based on this value in a linear
@@ -83,6 +83,11 @@ WeaponData
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
 		"TotalDamage"		"77" 
+
+		// Damage multiplier on maximum charge
+		"MaxChargeBonus"	"1.42"
+
+		"MaxChargeTime"		"1.7"
 
 		// These multipliers can be used to fine tune the speeds of different parts of the attack.
 		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.
@@ -104,10 +109,11 @@ WeaponData
 		
 		"blockatk_forward"
 		{
-			"TraceStart"		"0.43"
-			"TraceEnd"			"0.67"
+			"TraceStart"		"0.55"
+			"TraceEnd"			"0.75"
 			"TraceDir"			"forward"
 			"DamageMultiplier"	"1.0"
+			"StartDuration"		"0.71"
 			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
 			"Duration"			"1.15"
 		}	
@@ -126,8 +132,8 @@ WeaponData
 		
 		"blockatk_back"
 		{
-			"TraceStart"		"0.43"
-			"TraceEnd"			"0.67"
+			"TraceStart"		"0.55"
+			"TraceEnd"			"0.75"
 			"TraceDir"			"forward"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_BACK"
@@ -148,8 +154,8 @@ WeaponData
 		
 		"blockatk_left"
 		{
-			"TraceStart"		"0.43"
-			"TraceEnd"			"0.67"
+			"TraceStart"		"0.55"
+			"TraceEnd"			"0.75"
 			"TraceDir"			"left"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_LEFT"
@@ -170,8 +176,8 @@ WeaponData
 		
 		"blockatk_right"
 		{
-			"TraceStart"		"0.43"
-			"TraceEnd"			"0.67"
+			"TraceStart"		"0.55"
+			"TraceEnd"			"0.75"
 			"TraceDir"			"right"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_RIGHT"

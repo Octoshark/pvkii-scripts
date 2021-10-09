@@ -67,7 +67,7 @@ WeaponData
 
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
-		"Weight"			"large"
+		"Weight"		"large"
 		
 		"ViewEffectScale"	"2.5"
 		

@@ -25,11 +25,9 @@ WeaponData
 	"Gravity"			"1.1"
 	"MaxVelocity"		"3000"
 
-	// Atlatl specific
-	"AtlatlChargeSpeed"			"2.8" // Charge speed multiplier
-	"AtlatlChargeDecayStart"	"0" // Start decaying n seconds after hitting full charge
-	"AtlatlChargeDecayEnd"		"0.8" // Previous Value: (1.5)
-	"AtlatlBlindFireModifier"		"1.0" // Damage modifier for blind fire shot
+	"ChargeRate"			"2.8" // Multiplier for how fast charging occurs. (Default 1.0)
+	"MaxChargeTime"			"1" // Maximum time you can charge. This factors in to how long you can hold a fully charged shot. (Default 2.0)
+	"ChargeDecayTime"		"0.8" // How many seconds does it take to fully decay the charge meter. (Default 8.0)
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

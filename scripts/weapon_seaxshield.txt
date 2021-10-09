@@ -69,10 +69,11 @@ WeaponData
 		"Range"				"50"	// The maximum range this weapon can reach in hl2 units
 		"ShieldRange"		"50"	// The maximum range this shield can reach in hl2 units
 		"FireRate"			"0.58"	// Length of the attack animation in seconds
-		
+		"BashDamage"		"10"	// Base damage for shield bashes
+	
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
-		"Weight"			"medium"
+		"Weight"		"medium"
 		
 		"ViewEffectScale"	"1.0"
 		
@@ -84,11 +85,9 @@ WeaponData
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
 		"TotalDamage"		"46"
-
-		"SpecialDamage"		"10" // * 26
 		
 		// Shield hitpoints
-		"ShieldStrength"	"200"
+		"ShieldStrength"	"240"
 		
 		"forward"
 		{

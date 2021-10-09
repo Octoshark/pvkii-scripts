@@ -3,7 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_Stiletto"
 	"viewmodel"				"models/weapons/stiletto.mdl"
-	"playermodel"			"models/weapons/w_stiletto/w_stiletto.mdl"
+	"playermodel"			"models/weapons/w_stiletto/w_stilettoandparryingdagger.mdl"
 	"PlayerAnimationExtension"	"stiletto"
 	
 	//"anim_prefix"			"knife"
@@ -17,14 +17,10 @@ WeaponData
 	"weight"				"2"
 	"item_flags"			"0"
 	
-	"SpecialDamage"			"85"
 	"PlayerSpeedSpecial"	"260"
-	
-	"SpecialBackstabMultiplier" "1.9"
-	"BackstabMultiplier" "1.98"
 
-	"SpecialWarmup" "0.5" // Special Charge Time in Seconds
-	"SpecialRange"	"70" // How far the special attack extends
+	"BackstabMinDamage" "55"
+	"BackstabMaxDamage" "95"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -76,7 +72,8 @@ WeaponData
 
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
-		"Weight"			"medium"
+		"AttackWeight"		"small"	
+		"ParryWeight"		"medium"
 		
 		"ViewEffectScale"	"1.0"
 		
@@ -87,7 +84,10 @@ WeaponData
 		
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
-		"TotalDamage"		"38" 
+		"TotalDamage"		"46" 
+
+		"MaxChargeTime"		"1"
+		"ChargeCycleTime"	"4"
 
 		// These multipliers can be used to fine tune the speeds of different parts of the attack.
 		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.
@@ -105,7 +105,7 @@ WeaponData
 			"StartActivity"		"ACT_VM_ATTACK_FORWARD_START"
 			"StartDuration"		"0.20"
 			"Activity"			"ACT_VM_ATTACK_FORWARD"
-			"Duration"			"0.65"
+			"Duration"			"0.7"
 		}
 		
 		"back"
@@ -117,7 +117,7 @@ WeaponData
 			"StartActivity"		"ACT_VM_ATTACK_BACK_START"
 			"StartDuration"		"0.20"
 			"Activity"			"ACT_VM_ATTACK_BACK"
-			"Duration"			"0.65"
+			"Duration"			"0.7"
 		}
 		
 		"left"
@@ -129,7 +129,7 @@ WeaponData
 			"StartActivity"		"ACT_VM_ATTACK_LEFT_START"
 			"StartDuration"		"0.20"
 			"Activity"			"ACT_VM_ATTACK_LEFT"
-			"Duration"			"0.65"
+			"Duration"			"0.7"
 		}
 		
 		"right"
@@ -141,7 +141,7 @@ WeaponData
 			"StartActivity"		"ACT_VM_ATTACK_RIGHT_START"
 			"StartDuration"		"0.20"
 			"Activity"			"ACT_VM_ATTACK_RIGHT"
-			"Duration"			"0.65"
+			"Duration"			"0.7"
 		}
 		
 		"blockatk_forward"

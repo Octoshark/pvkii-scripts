@@ -23,6 +23,10 @@ WeaponData
 	"weight"			"0"
 	"item_flags"			"2"	// ITEM_FLAG_NOAUTORELOAD
 
+	// Projectile settings
+	"Gravity" 		"3"
+	"MaxVelocity"		"1500"
+
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{

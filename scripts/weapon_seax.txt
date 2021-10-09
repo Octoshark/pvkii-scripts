@@ -73,7 +73,7 @@ WeaponData
 
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
-		"Weight"			"medium"
+		"Weight"		"medium"
 		
 		"ViewEffectScale"	"1.0"
 		
@@ -91,7 +91,7 @@ WeaponData
 			"TraceStart"		"0.09" // Time in seconds, relative to the attack animation (Frame/FPS)
 			"TraceEnd"			"0.17"
 			"TraceDir"			"forward"
-			"DamageMultiplier"	"1.13"
+			"DamageMultiplier"	"1.17"
 			"StartActivity"		"ACT_VM_ATTACK_FORWARD_START"
 			"StartDuration"		"0.54"
 			"Activity"			"ACT_VM_ATTACK_FORWARD"

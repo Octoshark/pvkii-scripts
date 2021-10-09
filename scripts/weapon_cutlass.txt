@@ -69,7 +69,7 @@ WeaponData
 
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
-		"Weight"			"medium"
+		"Weight"		"medium"
 		
 		"ViewEffectScale"	"1.0"
 		
@@ -81,6 +81,9 @@ WeaponData
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
 		"TotalDamage"		"42" 
+		
+		"MaxChargeTime"		"1"
+		"ChargeCycleTime"	"4"
 		
 		"forward"
 		{
@@ -132,42 +135,42 @@ WeaponData
 		
 		"blockatk_forward"
 		{
-			"TraceStart"		"0.51"
-			"TraceEnd"			"0.68"
+			"TraceStart"		"0.14"
+			"TraceEnd"			"0.25"
 			"TraceDir"			"forward"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
-			"Duration"			"0.8"
+			"Duration"			"0.6"
 		}
 		
 		"blockatk_back"
 		{
-			"TraceStart"		"0.51"
-			"TraceEnd"			"0.68"
+			"TraceStart"		"0.14"
+			"TraceEnd"			"0.25"
 			"TraceDir"			"right"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_BACK"
-			"Duration"			"0.8"
+			"Duration"			"0.6"
 		}
 		
 		"blockatk_left"
 		{
-			"TraceStart"		"0.51"
-			"TraceEnd"			"0.68"
+			"TraceStart"		"0.14"
+			"TraceEnd"			"0.25"
 			"TraceDir"			"left"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_LEFT"
-			"Duration"			"0.8"
+			"Duration"			"0.6"
 		}
 		
 		"blockatk_right"
 		{
-			"TraceStart"		"0.51"
-			"TraceEnd"			"0.68"
+			"TraceStart"		"0.14"
+			"TraceEnd"			"0.25"
 			"TraceDir"			"right"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_RIGHT"
-			"Duration"			"0.8"
+			"Duration"			"0.6"
 		}
 	}
 }

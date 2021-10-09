@@ -13,10 +13,14 @@ PlayerClassData
 
 	"MaxSpecial"		"165"
 	
+		
+	
+		
 	"Weapon"
 	{
 		"Name"		"weapon_cutlass"
 	}
+	
 	
 	"Weapon"
 	{
@@ -28,4 +32,6 @@ PlayerClassData
 	{
 		"Name"		"weapon_powderkeg"
 	}
+		
+	
 }
