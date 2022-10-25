@@ -1,13 +1,19 @@
 ScriptableData
 {
 	// The damage and velocity of the arrow uses a separate configuration from the standard arrows
-	"SpecialArrowDamage"	"65"
+	"SpecialArrowDamage"	"15"
 	"SpecialArrowGravity"	"0.8"
 	"SpecialArrowMaxVelocity"	"2950"
 	
+	"SpecialExplosionDamage"	"65" // max damage of bondus explosion
+	"SpecialExplosionRadius"	"80" // radius of bondus explosion
+	"SpecialExplosionMinFalloff"	".33" // minimum falloff for bondus explosion
+	"SpecialExplosionMinDmgMult"	".3189529853" // minimum falloff for bondus explosion
+	"SpecialExplosionArrowCap"	"3" // amount of explosions landed per player to achieve minimum damage
+	
 	// Hunter state
 	"SpecialDuration"	"1.45" // The Hunter state lasts for X seconds.
-	"SpecialFireRate"	"0.17" // Cooldown between firing each arrow so they can't spam it
+	"SpecialFireRate"	"0.24" // Cooldown between firing each arrow so they can't spam it
 	"SpecialArrowsLimit"	"5" // After firing X arrows, the Hunter state ends
 	"SpecialSpeedup"	"0.72" // Speed modifier during the special
 	

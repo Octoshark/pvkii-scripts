@@ -2,6 +2,7 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Crossbow"
+	"description"		"#ClassMenu_Desc_Crossbow"
 	"viewmodel"			"models/weapons/crossbow.mdl"
 	"playermodel"			"models/weapons/w_crossbow/w_crossbow.mdl"
 	"PlayerAnimationExtension"	"crossbow"

@@ -2,6 +2,7 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_SniperPistol"
+	"description"		"#ClassMenu_Desc_SniperPistol"
 	"viewmodel"			"models/weapons/sspistol.mdl"
 	"playermodel"			"models/weapons/w_sspistol/w_sspistol.mdl"
 	"PlayerAnimationExtension"	"sspistol"
@@ -18,12 +19,23 @@ WeaponData
 	"item_flags"			"6"
 
 	"damage"			"45"
-
+	
+	"falloff"		"1" 			// boolean to enable falloff
+	
+	"MaxFalloffDistance" 	"500"	// Maximum distance for the minimum damage to be achieved with falloff
+	"MinFalloffDistance"	"200"	// Minimum distance for the maximum damage to be achieved with falloff
+	"MaxFalloffDistanceAimed" 	"10000"	// Maximum distance for the minimum damage to be achieved with falloff when aimed
+	"MinFalloffDistanceAimed"	"5000"	// Minimum distance for the maximum damage to be achieved with falloff when aimed
+	
+	"MinimumDamageFalloff"	"15"	// Minimum damage multiplier with falloff
+	
 	"BulletSpeed"		"6000"
-	"BulletDrop"		"250"
+	"BulletDrop"		"40"
 
-	"SpecialDamage"			"115"
-	"MaxVelocity"			"800"
+	"Knockback"		"0"
+	"AuxKnockback"		".45"
+	
+	"SpecialWeaponDependency"	"weapon_powderhorn"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -71,13 +83,13 @@ WeaponData
 			"width"		"128"
 			"height"	"128"
 		}
-		"crosshair"
+				"crosshair"
 		{
 			"file"		"sprites/crosshairs"
-			"x"			"51"
-			"y"			"6"
-			"width"		"38"
-			"height"	"38"
+			"x"			"0"
+			"y"			"0"
+			"width"		"24"
+			"height"	"24"
 		}
 	}
 }

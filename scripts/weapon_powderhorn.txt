@@ -1,22 +1,20 @@
 WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"			"#ClassMenu_Powderkeg"
-	"description"		"#ClassMenu_Desc_Powderkeg"
-	"viewmodel"			"models/weapons/keg.mdl"
-	"playermodel"			"models/weapons/w_keg/w_keg.mdl"
-	"PlayerAnimationExtension"	"keg"
+	"printname"			"#ClassMenu_PowderHorn"
+	"viewmodel"				"models/weapons/v_powderhorn.mdl"
+	"PlayerAnimationExtension"	"powderhorn"
 	
 	"anim_prefix"			"anim"
-	"bucket"			"2"
-	"bucket_position"		"8"
+	"bucket"			"3"
+	"bucket_position"		"0"
 
-	"clip_size"			"-1"
+	"clip_size"				"-1"
 	"clip2_size"			"-1"
 	"default_clip"			"1"
 	"default_clip2"			"-1"
 
-	"primary_ammo"			"AMMO_GRENADE"
+	"primary_ammo"			"None"
 	"secondary_ammo"		"None"
 
 	"weight"			"1"
@@ -25,8 +23,8 @@ WeaponData
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{
-		"draw"		"Weapon_PowderKeg.Draw"
-		"holster"	"Weapon_PowderKeg.Holster"
+		"draw"		"Weapon_SmokeBomb.Draw"
+		"single_shot"	"Weapon_SmokeBomb.Single"
 	}
 
 	// Weapon Sprite data is loaded by the Client DLL.

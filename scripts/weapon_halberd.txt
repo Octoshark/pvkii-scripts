@@ -2,6 +2,7 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Halberd"
+	"description"		"#ClassMenu_Desc_Halberd"
 	"viewmodel"			"models/weapons/halberd.mdl"
 	"playermodel"			"models/weapons/w_halberd/w_halberd.mdl"
 	"PlayerAnimationExtension"	"halberd"
@@ -17,6 +18,8 @@ WeaponData
 	"weight"				"5"
 	"item_flags"			"0"
 
+	"ComboResetTime"		"2.5"
+	
 	"SpecialDamage"			"2.0"	// Fart cloud damage taken every 0.5 seconds
 	"SpecialWarmup"			"1.0"	// Fart cloud special warm up time
 	"SpecialDuration"		"5.0"	// Fart cloud special duration
@@ -87,7 +90,7 @@ WeaponData
 
 		// Also note that charging the attack (holding the attack for 1 second) increases the
 		// maximum damage by 20%
-		"TotalDamage"		"48"
+		"TotalDamage"		"56"
 
 		// These multipliers can be used to fine tune the speeds of different parts of the attack.
 		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.
@@ -100,7 +103,7 @@ WeaponData
 			"TraceStart"		"0.15" // Time in seconds, relative to the attack animation (Frame/FPS)
 			"TraceEnd"			"0.30"
 			"TraceDir"			"forward"
-			"DamageMultiplier"	"1.2"
+			"DamageMultiplier"	"1.0"
 			"StartActivity"		"ACT_VM_ATTACK_FORWARD_START"
 			"StartDuration"		"0.45"
 			"Activity"			"ACT_VM_ATTACK_FORWARD"
@@ -112,7 +115,7 @@ WeaponData
 			"TraceStart"		"0.15"
 			"TraceEnd"			"0.30"
 			"TraceDir"			"back"
-			"DamageMultiplier"	"1.1"
+			"DamageMultiplier"	"0.9"
 			"StartActivity"		"ACT_VM_ATTACK_BACK_START"
 			"StartDuration"		"0.45"
 			"Activity"			"ACT_VM_ATTACK_BACK"
@@ -124,7 +127,7 @@ WeaponData
 			"TraceStart"		"0.15"
 			"TraceEnd"			"0.30"
 			"TraceDir"			"left"
-			"DamageMultiplier"	"1.03"
+			"DamageMultiplier"	"0.87"
 			"StartActivity"		"ACT_VM_ATTACK_RIGHT_START"
 			"StartDuration"		"0.35"
 			"Activity"			"ACT_VM_ATTACK_RIGHT"
@@ -136,7 +139,7 @@ WeaponData
 			"TraceStart"		"0.15"
 			"TraceEnd"			"0.30"
 			"TraceDir"			"right"
-			"DamageMultiplier"	"1.03"
+			"DamageMultiplier"	"0.87"
 			"StartActivity"		"ACT_VM_ATTACK_LEFT_START"
 			"StartDuration"		"0.35"
 			"Activity"			"ACT_VM_ATTACK_LEFT"

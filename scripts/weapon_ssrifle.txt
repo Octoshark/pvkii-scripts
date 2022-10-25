@@ -2,6 +2,7 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_SniperRifle"
+	"description"		"#ClassMenu_Desc_SniperRifle"
 	"viewmodel"			"models/weapons/musket.mdl"
 	"playermodel"			"models/weapons/w_musket/w_musket.mdl"
 	"PlayerAnimationExtension"	"musket"
@@ -19,11 +20,15 @@ WeaponData
 
 	"damage"			"100"
 
+	"falloff"			"0"
+	
 	"BulletSpeed"		"6000"
 	"BulletDrop"		"80"
+	
+	"Knockback"		"1.5"
+	"AuxKnockback"		"3" // added onto knockback during buff
 
-	"SpecialDamage"			"115"
-	"MaxVelocity"			"800"
+	"SpecialWeaponDependency"	"weapon_powderhorn"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

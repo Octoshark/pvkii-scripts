@@ -2,6 +2,7 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Javelin"
+	"description"		"#ClassMenu_Desc_Javelin"
 	"viewmodel"			"models/weapons/javelin.mdl"
 	"playermodel"			"models/weapons/w_javelin/w_javelin.mdl"
 	"PlayerAnimationExtension"	"javelin"

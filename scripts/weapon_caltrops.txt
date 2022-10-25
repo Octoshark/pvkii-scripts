@@ -2,6 +2,7 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Caltrops"
+	"description"		"#ClassMenu_Desc_Caltrops"
 	"viewmodel"				"models/weapons/v_caltrops.mdl"
 	"playermodel"			"models/weapons/w_assassin_bag/w_assassin_bag.mdl"
 	"PlayerAnimationExtension"	"caltrops"
@@ -18,7 +19,7 @@ WeaponData
 	"primary_ammo"			"AMMO_CALTROPS"
 	"secondary_ammo"		"None"
 	
-	"damage"			"5"
+	"damage"			"3"
 
 	"weight"			"0"
 	"item_flags"			"2"	// ITEM_FLAG_NOAUTORELOAD
@@ -26,6 +27,8 @@ WeaponData
 	// Projectile settings
 	"Gravity" 		"3"
 	"MaxVelocity"		"1500"
+	
+	"SpecialWeaponDependency"	"weapon_smokebomb"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

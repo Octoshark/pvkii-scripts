@@ -2,6 +2,7 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Pistol"
+	"description"		"#ClassMenu_Desc_Pistol"
 	"viewmodel"			"models/weapons/pistol.mdl"
 	"playermodel"			"models/weapons/w_pistol/w_pistol.mdl"
 	"PlayerAnimationExtension"	"flintlock"
@@ -20,6 +21,21 @@ WeaponData
 	"damage"			"40"
 	"HeadshotDamage"		"16"
 	
+	"BulletSpeed"		"5000"
+	"BulletDrop"		"50"
+	
+	"falloff"				"1" 	// boolean to enable falloff
+	
+	"MaxFalloffDistance"     "400"        // Maximum distance for the minimum damage to be achieved with falloff
+    "MinFalloffDistance"    "200"        // Minimum distance for the maximum damage to be achieved with falloff
+    "MaxFalloffDistanceAimed"     "500"    // Maximum distance for the minimum damage to be achieved with falloff when aimed
+    "MinFalloffDistanceAimed"    "300"    // Minimum distance for the maximum damage to be achieved with falloff when aimed
+    "FalloffCutoff"            "600"         // Distance at which the gun halves damage
+	"MinimumDamageFalloff"	"12"	// Minimum damage multiplier with falloff
+	
+	
+	"Knockback"		"0"
+	"AuxKnockback"		".33"
 	
 	"PlayerSpeedSniper"		"160"
 
@@ -69,13 +85,13 @@ WeaponData
 			"width"		"128"
 			"height"	"128"
 		}
-		"crosshair"
+			"crosshair"
 		{
 			"file"		"sprites/crosshairs"
-			"x"			"51"
-			"y"			"6"
-			"width"		"38"
-			"height"	"38"
+			"x"			"0"
+			"y"			"0"
+			"width"		"24"
+			"height"	"24"
 		}
 	}
 }

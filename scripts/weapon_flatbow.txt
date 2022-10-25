@@ -2,13 +2,16 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_flatbow"
+	"description"		"#ClassMenu_Desc_flatbow"
 	"viewmodel"			"models/weapons/v_flatbow.mdl"
 	"playermodel"			"models/weapons/w_flatbow/w_flatbow.mdl"
 	"PlayerAnimationExtension"	"flatbow"
 	
 	"anim_prefix"			"anim"
 	"bucket"				"2"
-	"bucket_position"		"3"
+	"bucket_position"		"3"	
+	"DeployDelay"			"0.25"
+
 
 	"clip_size"				"-1"
 	"primary_ammo"			"AMMO_FLATBOWARROWS"

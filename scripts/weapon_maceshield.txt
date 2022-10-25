@@ -2,9 +2,10 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_MaceBuckler"
+	"description"	"#ClassMenu_Desc_MaceBuckler"
 	"viewmodel"				"models/weapons/macebuckler.mdl"
 	"playermodel"			"models/weapons/w_macebuckler/w_macebuckler.mdl"
-	"PlayerAnimationExtension"	"vikingshield"
+	"PlayerAnimationExtension"	"mace"
 	
 	//"anim_prefix"			"knife"
 	"bucket"			"1"
@@ -76,6 +77,7 @@ WeaponData
 		"ShieldRange"		"45"	// The maximum range this shield can reach in hl2 units
 		"FireRate"			"0.58"	// Length of the attack animation in seconds
 		"BashDamage"		"15"	// Base shield bash damage
+		"BashAttackWeight"	"small"
 		
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.

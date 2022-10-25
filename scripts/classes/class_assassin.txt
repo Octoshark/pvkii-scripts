@@ -11,10 +11,8 @@ PlayerClassData
 	"MaxArmor"		"90"
 	"SpawnArmor"		"90"
 
-	"MaxSpecial"		"165"
+	"MaxSpecial"		"210"
 	
-	"CrouchSpeedFrac"	"0.66666666" // Speed multiplied by this when crouching, default value is 0.66666666
-	"DamageForFallSpeed"	"0.225225" // Fall velocity * this = damage, default value is about 0.225225
 
 	"Weapon"
 	{

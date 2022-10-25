@@ -2,6 +2,7 @@ WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_Cutlass"
+	"description"	"#ClassMenu_Desc_Cutlass"
 	"viewmodel"				"models/weapons/cutlass2.mdl"
 	"playermodel"			"models/weapons/w_cutlass2/w_cutlass2.mdl"
 	"PlayerAnimationExtension"	"cutlass"
@@ -9,6 +10,7 @@ WeaponData
 	//"anim_prefix"			"knife"
 	"bucket"			"0"
 	"bucket_position"		"2"
+	"DeployDelay"			"0.25"
 
 	"clip_size"				"-1"
 	"primary_ammo"			"None"
@@ -17,7 +19,11 @@ WeaponData
 	"weight"				"3"
 	"item_flags"			"0"
 	
-	"SpecialDamage"			"25" // * 11
+	"SpecialQuotaPercentage"	".33"
+	"SpecialDamage"			"18" // * 11
+	
+	"PlayerSpeedSpecial"			".35" // minimum speed mult after the lunge ends, scales to 1.0 at the end of duration
+	"SpecialDuration"				".25" // time that youre slowed down for after the lunge ends
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

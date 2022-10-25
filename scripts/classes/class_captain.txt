@@ -11,7 +11,7 @@ PlayerClassData
 	"MaxArmor"		"160"
 	"SpawnArmor"		"160"
 
-	"MaxSpecial"		"190"
+	"MaxSpecial"		"210"
 	
 	"Weapon"
 	{

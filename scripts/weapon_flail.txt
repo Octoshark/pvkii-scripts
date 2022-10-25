@@ -1,15 +1,14 @@
 WeaponData
 {
 	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"	"#ClassMenu_2hsword"
-	"description"	"#ClassMenu_Desc_2hsword"
-	"viewmodel"				"models/weapons/2hsword.mdl"
-	"playermodel"			"models/weapons/w_2hsword/w_2hsword.mdl"
-	"PlayerAnimationExtension"	"2hsword"
+	"printname"	"#ClassMenu_Flail"
+	"viewmodel"				"models/weapons/flail.mdl"
+	"playermodel"			"models/weapons/w_archersword/w_archersword.mdl"
+	"PlayerAnimationExtension"	"cutlass"
 	
 	"anim_prefix"			"anim"
-	"bucket"			"0"
-	"bucket_position"		"11"
+	"bucket"			"1"
+	"bucket_position"		"6"
 
 	"clip_size"				"-1"
 	"primary_ammo"			"None"
@@ -17,30 +16,24 @@ WeaponData
 
 	"weight"				"3"
 	"item_flags"			"0"
-	
-	"ComboResetTime"		"2.5"
-	
-	"SpecialQuotaPercentage"	".66"
-	"SpecialDamage"			"28" // * 7
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{
-		"single_shot"		"Weapon_Claymore.Single"
+		"single_shot"		"Weapon_Flail.Single"
+		"burst"			"Weapon_Flail.Charge"
 		"melee_hit"			"Weapon_Crowbar.Melee_Hit"
 		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
-		"draw"			"Weapon_Claymore.Draw"
-		"holster"		"Weapon_Claymore.Holster"
+		"draw"			"Weapon_Flail.Draw"
+		"holster"		"Weapon_Flail.Holster"
 	}
-	
-
 
 	// Weapon Sprite data is loaded by the Client DLL.
 	TextureData
 	{
 		"weapon"
 		{
-				"file"		"HUD/2hsword"
+				"file"		"HUD/bigaxe"
 				"x"		"0"
 				"y"		"0"
 				"width"		"512"
@@ -48,7 +41,7 @@ WeaponData
 		}
 		"weapon_s"
 		{
-				"file"		"HUD/2hsword"
+				"file"		"HUD/bigaxe"
 				"x"		"0"
 				"y"		"0"
 				"width"		"512"
@@ -71,13 +64,13 @@ WeaponData
 	
 	MeleeWeaponData
 	{
-		"Range"				"72"	// The maximum range this weapon can reach in hl2 units
-		
-		"ViewEffectScale"	"3.0"
-		
+		"Range"				"65"	// The maximum range this weapon can reach in hl2 units
+
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
 		"Weight"		"large"
+		
+		"ViewEffectScale"	"2.0"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
 		// The damage values for individual hittraces are calculated based on this value in a linear
@@ -86,106 +79,98 @@ WeaponData
 		
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
-		"TotalDamage"		"77" 
-
-		// Damage multiplier on maximum charge
-		"MaxChargeBonus"	"1.42"
-
-		"MaxChargeTime"		"1.7"
-
-		// These multipliers can be used to fine tune the speeds of different parts of the attack.
-		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.
-		"StartAttackSpeed"	"0.85"	// 1
-		"SwingSpeed"		"1.67"	// 2
-		"AttackSpeed"		"0.85"	// 2 and 3
+		"TotalDamage"		"80" 
 		
 		"forward"
 		{
-			"TraceStart"		"0.25" // Time in seconds, relative to the attack animation (Frame/FPS)
-			"TraceEnd"			"0.49"
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.40"
 			"TraceDir"			"forward"
 			"DamageMultiplier"	"1.0"
 			"StartActivity"		"ACT_VM_ATTACK_FORWARD_START"
-			"StartDuration"		"0.71"
+			"IdleActivity"		"ACT_VM_ATTACK_FORWARD_IDLE"
+			"StartDuration"		"0.60432"
 			"Activity"			"ACT_VM_ATTACK_FORWARD"
-			"Duration"			"1.15"
+			"Duration"			"0.75"
 		}
-		
-		"blockatk_forward"
-		{
-			"TraceStart"		"0.55"
-			"TraceEnd"			"0.75"
-			"TraceDir"			"forward"
-			"DamageMultiplier"	"1.0"
-			"StartDuration"		"0.71"
-			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
-			"Duration"			"1.15"
-		}	
 		
 		"back"
 		{
-			"TraceStart"		"0.25"
-			"TraceEnd"			"0.49"
+			"TraceStart"		"0.28"
+			"TraceEnd"			"0.33"
 			"TraceDir"			"back"
-			"DamageMultiplier"	"0.9"
+			"DamageMultiplier"	"0.5"
 			"StartActivity"		"ACT_VM_ATTACK_BACK_START"
-			"StartDuration"		"0.71"
+			"IdleActivity"		"ACT_VM_ATTACK_BACK_IDLE"
+			"StartDuration"		"0.41"
 			"Activity"			"ACT_VM_ATTACK_BACK"
-			"Duration"			"1.15"
-		}
-		
-		"blockatk_back"
-		{
-			"TraceStart"		"0.55"
-			"TraceEnd"			"0.75"
-			"TraceDir"			"forward"
-			"DamageMultiplier"	"1.0"
-			"Activity"			"ACT_VM_BLOCKATK_BACK"
-			"Duration"			"1.15"
+			"Duration"			"0.55"
 		}
 		
 		"left"
 		{
-			"TraceStart"		"0.25"
-			"TraceEnd"			"0.49"
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.40"
 			"TraceDir"			"left"
 			"DamageMultiplier"	"1.0"
 			"StartActivity"		"ACT_VM_ATTACK_LEFT_START"
-			"StartDuration"		"0.71"
+			"IdleActivity"		"ACT_VM_ATTACK_LEFT_IDLE"
+			"StartDuration"		"0.60432"
 			"Activity"			"ACT_VM_ATTACK_LEFT"
-			"Duration"			"1.15"
-		}
-		
-		"blockatk_left"
-		{
-			"TraceStart"		"0.55"
-			"TraceEnd"			"0.75"
-			"TraceDir"			"left"
-			"DamageMultiplier"	"1.0"
-			"Activity"			"ACT_VM_BLOCKATK_LEFT"
-			"Duration"			"1.15"
+			"Duration"			"0.75"
 		}
 		
 		"right"
 		{
-			"TraceStart"		"0.25"
-			"TraceEnd"			"0.49"
+			"TraceStart"		"0.33"
+			"TraceEnd"			"0.40"
 			"TraceDir"			"right"
 			"DamageMultiplier"	"1.0"
 			"StartActivity"		"ACT_VM_ATTACK_RIGHT_START"
-			"StartDuration"		"0.71"
+			"IdleActivity"		"ACT_VM_ATTACK_RIGHT_IDLE"
+			"StartDuration"		"0.60432"
 			"Activity"			"ACT_VM_ATTACK_RIGHT"
-			"Duration"			"1.15"
+			"Duration"			"0.75"
+		}
+		
+		"blockatk_forward"
+		{
+			"TraceStart"		"0.53"
+			"TraceEnd"			"0.77"
+			"TraceDir"			"forward"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
+			"Duration"			"1.25"
+		}
+		
+		"blockatk_back"
+		{
+			"TraceStart"		"0.53"
+			"TraceEnd"			"0.77"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_BACK"
+			"Duration"			"1.25"
+		}
+		
+		"blockatk_left"
+		{
+			"TraceStart"		"0.53"
+			"TraceEnd"			"0.77"
+			"TraceDir"			"back"
+			"DamageMultiplier"	"1.0"
+			"Activity"			"ACT_VM_BLOCKATK_LEFT"
+			"Duration"			"1.25"
 		}
 		
 		"blockatk_right"
 		{
-			"TraceStart"		"0.55"
-			"TraceEnd"			"0.75"
-			"TraceDir"			"right"
+			"TraceStart"		"0.53"
+			"TraceEnd"			"0.77"
+			"TraceDir"			"forward"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_RIGHT"
-			"Duration"			"1.15"
+			"Duration"			"1.25"
 		}
 	}
 }
