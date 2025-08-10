@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_Seax"
 	"description"	"#ClassMenu_Desc_Seax"
+	"loadoutdesc"	"#Loadout_Desc_seax"
 	"viewmodel"				"models/weapons/bondiseax.mdl"
 	"playermodel"			"models/weapons/w_bondiseax/w_bondiseax.mdl"
 	"PlayerAnimationExtension"	"seax"
@@ -10,7 +11,6 @@ WeaponData
 	//"anim_prefix"			"knife"
 	"bucket"			"0"
 	"bucket_position"		"7"
-	"DeployDelay"			"0.25"
 
 	"clip_size"				"-1"
 	"primary_ammo"			"None"
@@ -18,12 +18,6 @@ WeaponData
 
 	"weight"				"0"
 	"item_flags"			"0"
-
-	"damage"				"40"
-	
-	"SpecialDamage"			"4" // Poison damage
-	"SpecialDuration"		"8" // Poison duration
-	"SpecialFrequency"		"1" // Poison damage frequency
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -77,6 +71,8 @@ WeaponData
 		// get stunned by bigger weapons.
 		"Weight"		"medium"
 		
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
 		"ViewEffectScale"	"1.0"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).

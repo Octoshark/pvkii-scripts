@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Blunderbuss"
 	"description"		"#ClassMenu_Desc_Blunderbuss"
+	"loadoutdesc"	"#Loadout_Desc_blunderbuss"
 	"viewmodel"			"models/weapons/blunderbus.mdl"
 	"playermodel"			"models/weapons/w_blunderbus/w_blunderbus.mdl"
 	"PlayerAnimationExtension"	"blunderbus"
@@ -10,27 +11,43 @@ WeaponData
 	"anim_prefix"			"anim"	
 	"bucket"			"1"
 	"bucket_position"		"2"
-	"DeployDelay"			"0.25"
+	
+	"AutoSwitchFrom"		"0"
+	
+	"MaxAmmo"			"5"
+	"SpawnAmmo"			"4"
+	"AmmoPickup"			"4"
+	
+	"ReloadFinishTime" ".85"
 
 	"clip_size"				"-1"
 	"primary_ammo"			"AMMO_BLUNDERBUSS"
 	"secondary_ammo"		"None"
 
 	"weight"				"2"
-	"item_flags"			"6"
+	"item_flags"			"11"
 	
-	"Knockback"		"1.05"
-	"AuxKnockback"		"1.063" // very finicky, keep it under 1.1
-	
-	"falloff"			"0"
-
+	"Knockback"		"120"
 	"damage"			"6"
-    "HeadshotDamage"	"2"
-	"spread"			"25" // Bullet spread in degrees
+	"bullets"			"15"
+	"spread"			"17.5" // Bullet spread in degrees
+	
+	"ReloadTime"		"3.25"
 	
 	"SpecialDamage"			"125"
-	"SpecialGravity"		".75"
-	"SpecialMaxVelocity"	"1200"
+	"SpecialGravity"		".1"
+	"SpecialMaxVelocity"	"600"
+	
+	"BulletSpeed"		"3500"
+	"BulletDrop"		"250"
+
+	MuzzleFlash
+	{
+		"fov"			"90"
+		"color_max"		"4.9f"
+		"color_min"		"4.1f"
+		"farz"			"500"
+	}
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -69,13 +86,23 @@ WeaponData
 				"width"		"128"
 				"height"	"128"
 		}
+
+		"ammo2"
+		{
+			"file"		"HUD/cutlass_hook"
+			"x"		"0"
+			"y"		"0"
+			"width"		"128"
+			"height"	"128"
+		}
+		
 		"crosshair"
 		{
-			"file"		"sprites/crosshairs"
-			"x"			"51"
-			"y"			"6"
-			"width"		"38"
-			"height"	"38"
+			"file"		"sprites/reticles/ring"
+			"x"			"0"
+			"y"			"0"
+			"width"		"128"
+			"height"	"128"
 		}
 	}
 }

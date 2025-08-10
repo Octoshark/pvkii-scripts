@@ -8,6 +8,7 @@ WeaponData
 	
 	"anim_prefix"			"anim"
 	"bucket"			"3"
+	"bucket2"			"2"
 	"bucket_position"		"0"
 
 	"clip_size"				"-1"
@@ -20,6 +21,11 @@ WeaponData
 
 	"weight"			"1"
 	"item_flags"			"2"	// ITEM_FLAG_NOAUTORELOAD
+
+	
+	"MaxVelocity"		"800"
+	"PlayerSpeedSpecial"	"120"
+	"Gravity"	".8"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

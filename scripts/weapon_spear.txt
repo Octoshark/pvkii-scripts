@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Spear"
 	"description"		"#ClassMenu_Desc_Spear"
+	"loadoutdesc"	"#Loadout_Desc_spear"
 	"viewmodel"			"models/weapons/spear.mdl"
 	"playermodel"			"models/weapons/w_spear/w_spear.mdl"
 	"PlayerAnimationExtension"	"spear"
@@ -20,7 +21,7 @@ WeaponData
 
 
 	"SpecialQuotaPercentage"	".25"
-	"SpecialDamage"			"10"
+	"SpecialDamage"			"24"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -30,6 +31,8 @@ WeaponData
 		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
 		"draw"			"Weapon_Spear.Draw"
 		"holster"		"Weapon_Spear.Holster"
+		"special1"		"Weapon_Spear.Speedup"
+		"special2"		"Weapon_Spear.Speeddown"
 	}
 
 	// Weapon Sprite data is loaded by the Client DLL.
@@ -75,6 +78,8 @@ WeaponData
 		// get stunned by bigger weapons.
 		"Weight"		"medium"
 		
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
 		"ViewEffectScale"	"0.5"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
@@ -115,7 +120,7 @@ WeaponData
 			"TraceStart"		"0.09"
 			"TraceEnd"			"0.17"
 			"TraceDir"			"back"
-			"DamageMultiplier"	"1.0"
+			"DamageMultiplier"	"1"
 			"StartActivity"		"ACT_VM_ATTACK_LEFT_START"
 			"StartDuration"		"0.37"
 			"Activity"			"ACT_VM_ATTACK_LEFT"
@@ -127,7 +132,7 @@ WeaponData
 			"TraceStart"		"0.09"
 			"TraceEnd"			"0.17"
 			"TraceDir"			"back"
-			"DamageMultiplier"	"1.0"
+			"DamageMultiplier"	"1"
 			"StartActivity"		"ACT_VM_ATTACK_RIGHT_START"
 			"StartDuration"		"0.37"
 			"Activity"			"ACT_VM_ATTACK_RIGHT"

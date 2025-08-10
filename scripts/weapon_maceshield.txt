@@ -3,12 +3,14 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_MaceBuckler"
 	"description"	"#ClassMenu_Desc_MaceBuckler"
+	"loadoutdesc"	"#Loadout_Desc_mace"
 	"viewmodel"				"models/weapons/macebuckler.mdl"
 	"playermodel"			"models/weapons/w_macebuckler/w_macebuckler.mdl"
 	"PlayerAnimationExtension"	"mace"
 	
 	//"anim_prefix"			"knife"
 	"bucket"			"1"
+	"bucket2"			"0"
 	"bucket_position"		"9"
 
 	"clip_size"				"-1"
@@ -76,14 +78,13 @@ WeaponData
 		"Range"				"50"	// The maximum range this weapon can reach in hl2 units
 		"ShieldRange"		"45"	// The maximum range this shield can reach in hl2 units
 		"FireRate"			"0.58"	// Length of the attack animation in seconds
-		"BashDamage"		"15"	// Base shield bash damage
-		"BashAttackWeight"	"small"
-		
-		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
-		// get stunned by bigger weapons.
+		"BashDamage"		"10"	// Base shield bash damage
+		"BashSpeedupMult"	"2"	// Multiplier for the attack that follows a bash
 		"Weight"		"medium"	// If it's not set, ParryWeight will have this value
 		
-		"ViewEffectScale"	"1.0"
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
+		"ViewEffectScale"	"1.25"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
 		// The damage values for individual hittraces are calculated based on this value in a linear
@@ -101,7 +102,7 @@ WeaponData
 		"AttackSpeed"		"0.85"	// 2 and 3
 		
 		// Shield hitpoints
-		"ShieldStrength"	"185"
+		"ShieldStrength"	"225"
 		
 		"forward"
 		{
@@ -119,7 +120,7 @@ WeaponData
 		{
 			"TraceStart"		"0.09"
 			"TraceEnd"			"0.17"
-			"TraceDir"			"back"
+			"TraceDir"			"reverse"
 			"DamageMultiplier"	"1.0"
 			"StartActivity"		"ACT_VM_ATTACK_BACK_START"
 			"StartDuration"		"0.35"
@@ -163,12 +164,12 @@ WeaponData
 		
 		"blockatk_back"
 		{
-			"TraceStart"		"0.35"
-			"TraceEnd"			"0.55"
+			"TraceStart"		"0.15"
+			"TraceEnd"			"0.25"
 			"TraceDir"			"back"
 			"DamageMultiplier"	"1.0"
-			"Activity"			"ACT_VM_BLOCKATK_BACK"
-			"Duration"			"0.8"
+			"Activity"			"ACT_VM_ATTACK_BACK"
+			"Duration"			"0.7"
 		}
 		
 		"blockatk_left"

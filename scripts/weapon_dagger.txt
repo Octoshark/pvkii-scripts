@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Dagger"
 	"description"		"#ClassMenu_Desc_Dagger"
+	"loadoutdesc"	"#Loadout_Desc_dagger"
 	"viewmodel"			"models/weapons/dagger.mdl"
 	"playermodel"			"models/weapons/w_dagger/w_dagger.mdl"
 	"PlayerAnimationExtension"	"dagger"
@@ -72,13 +73,17 @@ WeaponData
 	
 	MeleeWeaponData
 	{
-		"Range"				"47"	// The maximum range this weapon can reach in hl2 units
+		"Range"				"45"	// The maximum range this weapon can reach in hl2 units
+		"auxiliaryRange"	"48"	// The maximum range of the thrust attack
+		
 		"FireRate"			"0.6"	// Length of the attack animation in seconds
 		
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
 		"Weight"			"small"
 		
+		"ComboTime"			"small"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
 		"ViewEffectScale"	"0.0"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
@@ -90,8 +95,8 @@ WeaponData
 		// maximum damage by 20%
 		"TotalDamage"		"25"
 		
-		"MaxChargeTime"		"1"
-		"ChargeCycleTime"	"4"
+		"ChargeStyle"		"quick" // type of charge. ( quick, normal, strong)
+		
 
 		// These multipliers can be used to fine tune the speeds of different parts of the attack.
 		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.

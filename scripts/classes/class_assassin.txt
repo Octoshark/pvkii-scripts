@@ -11,7 +11,7 @@ PlayerClassData
 	"MaxArmor"		"90"
 	"SpawnArmor"		"90"
 
-	"MaxSpecial"		"210"
+	"MaxSpecial"		"225"
 	
 
 	"Weapon"
@@ -22,17 +22,11 @@ PlayerClassData
 	"Weapon"
 	{
 		"Name"		"weapon_crossbow_pistol"
-		"ExtraAmmo"	"5"
 	}
 
 	"Weapon"
 	{
 		"Name"		"weapon_caltrops"
-		"ExtraAmmo"	"1"
 	}
 	
-	"Weapon"
-	{
-		"Name"		"weapon_smokebomb"
-	}
 }

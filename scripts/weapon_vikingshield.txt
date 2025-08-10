@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_VSwordShield"
 	"description"	"#ClassMenu_Desc_VSwordShield"
+	"loadoutdesc"	"#Loadout_Desc_huscshield"
 	"viewmodel"				"models/weapons/vikingshield.mdl"
 	"playermodel"			"models/weapons/w_vikingswordshield/w_vikingswordshield.mdl"
 	"PlayerAnimationExtension"	"vikingshield"
@@ -18,13 +19,15 @@ WeaponData
 	"weight"				"2"
 	"item_flags"			"0"
 	
-	"SpecialQuotaPercentage"	".15"
-	"SpecialDamage"			"30" // * 10
+	"SpecialQuotaPercentage"	".3"
+	"SpecialDamage"					"70" // damage required for someone to be launched by special
+	"SpecialSmallDamage"			"10" // damage per hit of special 
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{
 		"single_shot"		"Weapon_Huscarl.Sword"
+		"reload"		"Weapon_VicShield.Throw"
 		"melee_hit"		"Weapon_Crowbar.Melee_Hit"
 		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
 		"draw"			"Weapon_SwordShield.Draw"
@@ -71,11 +74,13 @@ WeaponData
 	MeleeWeaponData
 	{
 		"Range"				"50"	// The maximum range this weapon can reach in hl2 units
-		"ShieldRange"		"50"	// The maximum range this shield can reach in hl2 units
+		"ShieldRange"		"45"	// The maximum range this shield can reach in hl2 units
 		"FireRate"			"0.45"	// Length of the attack animation in seconds
-		"BashDamage"		"10"	// Base shield bash damage
-		"BashAttackWeight"	"medium"
+		"BashDamage"		"10"	// Base shield bash damage 
+		"BashSpeedupMult"	"2"	// Multiplier for the attack that follows a bash
 		
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
 		"Weight"		"medium"
@@ -89,12 +94,12 @@ WeaponData
 		
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
-		"TotalDamage"		"42"
+		"TotalDamage"		"38"
 
 		"SpecialDamage"		"10" // * 26
 		
 		// Shield hitpoints
-		"ShieldStrength"	"295"
+		"ShieldStrength"	"310"
 		
 		"forward"
 		{

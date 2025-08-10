@@ -1,0 +1,85 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_FireBreath"
+	"viewmodel"			"models/weapons/flamebreath.mdl"
+	"playermodel"			"models/weapons/w_flamebreath/w_flamebreath.mdl"
+	"PlayerAnimationExtension"	"flamebreath"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"3"
+	"bucket_position"		"0"
+	"DeployDelay"			".5"
+
+	"clip_size"				"-1"
+	"clip2_size"			"-1"
+	"default_clip"			"1"
+	"default_clip2"			"-1"
+
+	"primary_ammo"			"AMMO_FIREBREATH"
+	"secondary_ammo"		"None"
+
+	"weight"			"1"
+	"item_flags"			"2"	// ITEM_FLAG_NOAUTORELOAD
+	
+	"ReloadTime"		".33"
+	"SpecialWarmup"		"1.7"
+	
+	"MaxChargeTime"		"3.0"	
+	"ChargeRate"		".75"	
+	
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"	"Weapon_FireBreath.Single"
+		"double_shot"	"Weapon_FireBreath.StopFiring"
+		"reload"		"Weapon_FireBreath.Reload"
+		"special1"		"Weapon_FireBreath.Special1"
+		"special2"		"Weapon_FireBreath.Special2"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+		TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/flamebreath"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/flamebreath"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"ammo"
+		{
+				"file"		"HUD/flamebreath"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"24"
+			"y"			"-24"
+			"width"		"24"
+			"height"	"72"
+		}
+	}
+}

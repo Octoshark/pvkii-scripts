@@ -26,6 +26,5 @@ PlayerClassData
 	"Weapon"
 	{
 		"Name"		"weapon_javelin"
-		"ExtraAmmo"	"2"
 	}
 }

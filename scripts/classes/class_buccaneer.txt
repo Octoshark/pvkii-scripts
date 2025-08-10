@@ -1,0 +1,35 @@
+PlayerClassData
+{
+	"Model"			"models/player/buccaneer/buccaneer.mdl"
+	"GibDir"		"models/player/buccaneer/gibs"
+	
+	"MaxSpeed"		"205"
+	
+	"MaxHealth"		"190"
+	"SpawnHealth"		"190"
+	
+	"MaxArmor"		"110"
+	"SpawnArmor"		"110"
+
+	"MaxSpecial"		"260"
+	
+	"Weapon"
+	{
+		"Name"		"weapon_sledgehammer"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_axefist"
+	}
+
+	"Weapon"
+	{
+		"Name"		"weapon_boardinghook"
+	}
+	
+	"Weapon"
+	{
+		"Name"		"weapon_firebreath"
+	}
+}

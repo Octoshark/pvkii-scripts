@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_Cutlass2"
 	"description"	"#ClassMenu_Desc_Cutlass2"
+	"loadoutdesc"	"#Loadout_Desc_capcutlass"
 	"viewmodel"				"models/weapons/cutlass1.mdl"
 	"playermodel"			"models/weapons/w_cutlass1/w_cutlass1.mdl"
 	"PlayerAnimationExtension"	"ccutlass"
@@ -49,8 +50,11 @@ WeaponData
 		}
 		"ammo"
 		{
-				"font"		"WeaponIcons"
-				"character"	"c"
+			"file"		"HUD/cutlass_hook"
+			"x"		"0"
+			"y"		"0"
+			"width"		"128"
+			"height"	"128"
 		}
 		"ammo2"
 		{
@@ -70,7 +74,9 @@ WeaponData
 		// get stunned by bigger weapons.
 		"Weight"		"medium"
 		
-		"ViewEffectScale"	"1.5"
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
+		"ViewEffectScale"	"1.25"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
 		// The damage values for individual hittraces are calculated based on this value in a linear

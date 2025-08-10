@@ -3,12 +3,14 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_SeaxShield"
 	"description"	"#ClassMenu_Desc_SeaxShield"
+	"loadoutdesc"	"#Loadout_Desc_langseax"
 	"viewmodel"				"models/weapons/langseax.mdl"
 	"playermodel"			"models/weapons/w_langseax/w_langseaxshield.mdl"
 	"PlayerAnimationExtension"	"vikingshield"
 	
 	//"anim_prefix"			"knife"
 	"bucket"			"1"
+	"bucket2"			"0"
 	"bucket_position"		"10"
 
 	"clip_size"				"-1"
@@ -68,11 +70,13 @@ WeaponData
 	MeleeWeaponData
 	{
 		"Range"				"50"	// The maximum range this weapon can reach in hl2 units
-		"ShieldRange"		"50"	// The maximum range this shield can reach in hl2 units
+		"ShieldRange"		"45"	// The maximum range this shield can reach in hl2 units
 		"FireRate"			"0.58"	// Length of the attack animation in seconds
 		"BashDamage"		"10"	// Base damage for shield bashes
-		"BashAttackWeight"	"medium"
-		
+		"BashSpeedupMult"	"2"	// Multiplier for the attack that follows a bash
+
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
 		"Weight"		"medium"
@@ -89,7 +93,7 @@ WeaponData
 		"TotalDamage"		"46"
 		
 		// Shield hitpoints
-		"ShieldStrength"	"240"
+		"ShieldStrength"	"260"
 		
 		"forward"
 		{

@@ -3,41 +3,46 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Pistol"
 	"description"		"#ClassMenu_Desc_Pistol"
-	"viewmodel"			"models/weapons/pistol.mdl"
+	"loadoutdesc"	"#Loadout_Desc_flintlocks"
+	"viewmodel"			"models/weapons/pistol_new.mdl"
 	"playermodel"			"models/weapons/w_pistol/w_pistol.mdl"
 	"PlayerAnimationExtension"	"flintlock"
 	
 	"anim_prefix"			"anim"
 	"bucket"			"1"
-	"bucket_position"		"7"
+	"bucket_position"		"7"	
+	"AmmoPickup"		"6"
+	"DeployDelay"		".2"
+	"ReloadFinishTime" ".6"
 
-	"clip_size"				"6"
+	"SpawnAmmo"			"2"
+	"clip_size"				"4"
 	"primary_ammo"			"AMMO_FLINTLOCK"
 	"secondary_ammo"		"None"
-
+	
+	"AutoSwitchFrom"		"0"
+	
 	"weight"				"2"
-	"item_flags"			"6"
+	"item_flags"			"11"
 
-	"damage"			"40"
-	"HeadshotDamage"		"16"
+	"damage"			"40" // base damage
+	"spread"			"12.5" // spread of pistols at no charge 
+	"MinSpread"			"7.25" // spread of pistols at full charge 
 	
+	// have to do these functions as to avoid modifying the models
+	"ChargeRate"	 	"1" // ( .5 (desired ads time) / ( 15 (ads frames) / 40 (fps) ) )
+	"MaxChargeTime" 	".223" // ENSURE THIS VALUE MATCHES DESIRED ADS TIME
+	
+	"ZoomPercent"		"1" //	no zoom
 	"BulletSpeed"		"5000"
-	"BulletDrop"		"50"
-	
-	"falloff"				"1" 	// boolean to enable falloff
-	
-	"MaxFalloffDistance"     "400"        // Maximum distance for the minimum damage to be achieved with falloff
-    "MinFalloffDistance"    "200"        // Minimum distance for the maximum damage to be achieved with falloff
-    "MaxFalloffDistanceAimed"     "500"    // Maximum distance for the minimum damage to be achieved with falloff when aimed
-    "MinFalloffDistanceAimed"    "300"    // Minimum distance for the maximum damage to be achieved with falloff when aimed
-    "FalloffCutoff"            "600"         // Distance at which the gun halves damage
-	"MinimumDamageFalloff"	"12"	// Minimum damage multiplier with falloff
-	
+	"BulletDrop"		"50" 
 	
 	"Knockback"		"0"
-	"AuxKnockback"		".33"
+	"AuxKnockback"		"50"
+		
+	"CycleTime"				"1.8" // Time in between each shot in seconds
 	
-	"PlayerSpeedSniper"		"160"
+	"PlayerSpeedSniper"		"120"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -79,19 +84,28 @@ WeaponData
 		}
 		"ammo2"
 		{
-			"file"		"HUD/pistolammoballs"
+			"file"		"HUD/pistolammo_new"
 			"x"			"0"
 			"y"			"0"
 			"width"		"128"
 			"height"	"128"
 		}
-			"crosshair"
+
+		"aimed"
 		{
-			"file"		"sprites/crosshairs"
+			"file"		"sprites/reticles/dot"
 			"x"			"0"
 			"y"			"0"
-			"width"		"24"
-			"height"	"24"
+			"width"		"32"
+			"height"	"32"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/reticles/ring"
+			"x"			"0"
+			"y"			"0"
+			"width"		"128"
+			"height"	"128"
 		}
 	}
 }

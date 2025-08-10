@@ -1,0 +1,24 @@
+"ScriptableData"
+{
+	// Special properties
+	"SpecialDuration"	"4"
+	"SpecialLinger"		"1"
+	"StartDelay"		"2.0"
+	"Damage"			"10.0"
+	"Fireballs"			"2"
+	"FireballDamage"			"60"
+	"ShootDelay"		"0.05"
+	"Ammo"				"50"
+	
+	// Damage properties
+	"MaxDamageDistance"	"350.0"
+	"MinDamageScale"	"0.70" // dead value
+	"MaxDamageScale"	"1.0" // dead value
+	
+	
+	// Flame properties
+	"FlameVelocity"		"600.0"
+	"FlameBoxSize"		"20.0"
+	"FlameLifeTime"		".70"
+	"FlameDrag"			".85"
+}

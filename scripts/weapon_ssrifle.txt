@@ -3,13 +3,18 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_SniperRifle"
 	"description"		"#ClassMenu_Desc_SniperRifle"
+	"loadoutdesc"	"#Loadout_Desc_longrifle"
 	"viewmodel"			"models/weapons/musket.mdl"
 	"playermodel"			"models/weapons/w_musket/w_musket.mdl"
 	"PlayerAnimationExtension"	"musket"
 
 	"anim_prefix"			"anim"
 	"bucket"			"2"
+	"bucket2"			"1"
 	"bucket_position"		"9"
+	"ReloadFinishTime" ".87"	
+	"AmmoPickup"		"5"
+	"SpawnAmmo"		"5"
 
 	"clip_size"			"-1"
 	"primary_ammo"			"AMMO_SNIPER"
@@ -25,8 +30,19 @@ WeaponData
 	"BulletSpeed"		"6000"
 	"BulletDrop"		"80"
 	
-	"Knockback"		"1.5"
-	"AuxKnockback"		"3" // added onto knockback during buff
+	"Knockback"		"150"
+	"AuxKnockback"		"250" 
+
+	"spread"			"5" // spread of pistols at 0 charge 
+	"MinSpread"			"0" // spread of pistols at full charge 
+	
+	// have to do these functions as to avoid modifying the models
+	"ChargeRate"	 	"1" // ( .5 (desired ads time) / ( 7 (ads frames) / 30 (fps) ) )
+	"MaxChargeTime" 	".223" // ENSURE THIS VALUE MATCHES DESIRED ADS TIME
+	
+	"ZoomPercent"		".7"	% of default fov
+	"PlayerSpeedSniper"		"90"
+	"PlayerSpeedReload"		"100"
 
 	"SpecialWeaponDependency"	"weapon_powderhorn"
 
@@ -39,6 +55,14 @@ WeaponData
 		"holster"		"Weapon_SSRifle.Holster"
 	}
 
+	MuzzleFlash
+	{
+		"fov"			"120"
+		"color_max"		"4.9f"
+		"color_min"		"4.1f"
+		"farz"			"650"
+	}
+	
 	// Weapon Sprite data is loaded by the Client DLL.
 	TextureData
 	{
@@ -74,13 +98,31 @@ WeaponData
 			"width"		"24"
 			"height"	"24"
 		}
+		"aimed"
+		{
+			"file"		"sprites/reticles/dot"
+			"x"			"0"
+			"y"			"0"
+			"width"		"32"
+			"height"	"32"
+		}
 		"crosshair"
 		{
-			"file"		"sprites/crosshairs"
-			"x"			"48"
-			"y"			"48"
-			"width"		"24"
-			"height"	"24"
+			"file"		"sprites/reticles/ring"
+			"x"			"0"
+			"y"			"0"
+			"width"		"128"
+			"height"	"128"
 		}
 	}
 }
+
+//////// old crosshair ////////
+//	"crosshair"
+//	{
+//		"file"		"sprites/crosshairs"
+//		"x"			"48"
+//		"y"			"48"
+//		"width"		"24"
+//		"height"	"24"
+//	}

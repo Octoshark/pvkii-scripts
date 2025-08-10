@@ -3,27 +3,32 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_Cutlass"
 	"description"	"#ClassMenu_Desc_Cutlass"
+	"loadoutdesc"	"#Loadout_Desc_skirmcutlass"
 	"viewmodel"				"models/weapons/cutlass2.mdl"
-	"playermodel"			"models/weapons/w_cutlass2/w_cutlass2.mdl"
-	"PlayerAnimationExtension"	"cutlass"
+	"viewmodel2"				"models/weapons/cutlass_gun.mdl"
+	"playermodel"			"models/weapons/w_cutlass2/w_cutlass2_gun.mdl"
+	"PlayerAnimationExtension"	"cutlassgun"
+	"PlayerAnimationExtensionAlternate"	"cutlass"
 	
 	//"anim_prefix"			"knife"
 	"bucket"			"0"
 	"bucket_position"		"2"
-	"DeployDelay"			"0.25"
-
-	"clip_size"				"-1"
-	"primary_ammo"			"None"
+	
+	"clip_size"				"1"
+	"primary_ammo"			"AMMO_FLINTLOCK"
 	"secondary_ammo"		"None"
 
-	"weight"				"3"
-	"item_flags"			"0"
+	"weight"				"5"
+	"item_flags"			"5"
 	
 	"SpecialQuotaPercentage"	".33"
 	"SpecialDamage"			"18" // * 11
 	
 	"PlayerSpeedSpecial"			".35" // minimum speed mult after the lunge ends, scales to 1.0 at the end of duration
 	"SpecialDuration"				".25" // time that youre slowed down for after the lunge ends
+
+	"CycleTime"			".5"
+	"Reloadtime"			"2.3"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -53,12 +58,26 @@ WeaponData
 				"y"		"0"
 				"width"		"256"
 				"height"	"128"
-		}
+		}	
+
 		"ammo"
 		{
-				"font"		"WeaponIcons"
-				"character"	"c"
+				"file"		"HUD/pistolammo"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"128"
 		}
+		"ammo2"
+		{
+			"file"		"HUD/pistolammo_new"
+			"x"			"0"
+			"y"			"0"
+			"width"		"128"
+			"height"	"128"
+		}
+
+
 		"ammo2"
 		{
 			"file"		"sprites/640hud7"
@@ -67,17 +86,19 @@ WeaponData
 			"width"		"24"
 			"height"	"24"
 		}
+		
+		
 	}
 	
 	MeleeWeaponData
 	{
 		"Range"				"50"	// The maximum range this weapon can reach in hl2 units
 
-		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
-		// get stunned by bigger weapons.
+	
 		"Weight"		"medium"
-		
-		"ViewEffectScale"	"1.0"
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
+		"ViewEffectScale"	"0.75"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
 		// The damage values for individual hittraces are calculated based on this value in a linear
@@ -88,8 +109,7 @@ WeaponData
 		// maximum damage by 20%
 		"TotalDamage"		"42" 
 		
-		"MaxChargeTime"		"1"
-		"ChargeCycleTime"	"4"
+		"ChargeStyle"		"quick" // type of charge. ( quick, normal, strong)
 		
 		"forward"
 		{
@@ -141,42 +161,42 @@ WeaponData
 		
 		"blockatk_forward"
 		{
-			"TraceStart"		"0.14"
-			"TraceEnd"			"0.25"
+			"TraceStart"		"0.35"
+			"TraceEnd"			"0.50"
 			"TraceDir"			"forward"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
-			"Duration"			"0.6"
+			"Duration"			"0.8"
 		}
 		
 		"blockatk_back"
 		{
-			"TraceStart"		"0.14"
-			"TraceEnd"			"0.25"
-			"TraceDir"			"right"
+			"TraceStart"		"0.35"
+			"TraceEnd"			"0.50"
+			"TraceDir"			"back"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_BACK"
-			"Duration"			"0.6"
+			"Duration"			"0.8"
 		}
 		
 		"blockatk_left"
 		{
-			"TraceStart"		"0.14"
-			"TraceEnd"			"0.25"
+			"TraceStart"		"0.35"
+			"TraceEnd"			"0.50"
 			"TraceDir"			"left"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_LEFT"
-			"Duration"			"0.6"
+			"Duration"			"0.8"
 		}
 		
 		"blockatk_right"
 		{
-			"TraceStart"		"0.14"
-			"TraceEnd"			"0.25"
+			"TraceStart"		"0.35"
+			"TraceEnd"			"0.50"
 			"TraceDir"			"right"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_RIGHT"
-			"Duration"			"0.6"
+			"Duration"			"0.8"
 		}
 	}
 }

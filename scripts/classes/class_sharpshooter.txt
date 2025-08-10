@@ -16,13 +16,11 @@ PlayerClassData
 	"Weapon"
 	{
 		"Name"		"weapon_ssrifle"
-		"ExtraAmmo"	"5"
 	}
 	
 	"Weapon"
 	{
 		"Name"		"weapon_ssflintlock"
-		"ExtraAmmo"	"15"
 	}
 	
 	"Weapon"

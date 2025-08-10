@@ -1,0 +1,103 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"#ClassMenu_BHook"
+	"loadoutdesc"	"#Loadout_Desc_boardinghook"
+	"viewmodel"			"models/weapons/boardinghook.mdl"
+	"playermodel"			"models/weapons/w_boardinghook/w_bhook_rope.mdl"
+	"PlayerAnimationExtension"	"boardinghook"
+	
+	"anim_prefix"			"anim"
+	"bucket"			"2"
+	"bucket_position"		"10"
+
+	"SpawnAmmo"			"1"
+	"clip_size"			"-1"
+	"primary_ammo"			"AMMO_HOOK"
+	"secondary_ammo"		"None"
+
+	"weight"				"1"
+	"item_flags"			"4"
+
+	"damage"			"15"
+	
+	// Projectile settings
+	"Gravity"			"1.15"
+	"MaxVelocity"		"1850"
+	"RespawnTime" 		"20"
+	
+	"Knockback"	"75"
+	"AuxKnockback" 	"200"
+	"ChargeRate"			".75"
+	
+	"PlayerSpeedSniper" "160"
+	
+	"SpecialWeaponDependency"	"weapon_firebreath"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_BHook.Punch"
+		"double_shot"		"Weapon_BHook.Grab"
+		"reload"		"Weapon_BHook.Throw"
+		"draw"			"Weapon_BHook.Draw"
+		"holster"		"Weapon_BHook.Holster"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"HUD/boardinghook"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"256"
+		}
+		"weapon_s"
+		{
+				"file"		"HUD/boardinghook"
+				"x"		"0"
+				"y"		"0"
+				"width"		"512"
+				"height"	"256"
+		}
+		"ammo"
+		{
+				"file"		"HUD/boardinghookammo"
+				"x"		"0"
+				"y"		"-15"
+				"width"		"128"
+				"height"	"128"
+		}
+		"ammo2"
+		{
+			"file"		"sprites/640hud7"
+			"x"			"48"
+			"y"			"72"
+			"width"		"24"
+			"height"	"24"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/crosshairs"
+			"x"			"24"
+			"y"			"-24"
+			"width"		"24"
+			"height"	"72"
+		}
+	}
+	
+	MeleeWeaponData
+	{
+		"ShieldRange"				"60" 
+		"AuxBashDamage"		"35"  // uncharged dmg
+		"BashDamage"		"60"  // charged dmg 
+		
+		"MaxChargeBonus"	"1.35" // modifier for push
+		
+		"MaxChargeTime" "1.25"
+		"ChargeCycleTime"	"1.75"
+	}
+}

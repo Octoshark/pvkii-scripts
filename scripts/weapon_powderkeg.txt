@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Powderkeg"
 	"description"		"#ClassMenu_Desc_Powderkeg"
+	"loadoutdesc"	"#Loadout_Desc_keg"
 	"viewmodel"			"models/weapons/keg.mdl"
 	"playermodel"			"models/weapons/w_keg/w_keg.mdl"
 	"PlayerAnimationExtension"	"keg"
@@ -10,7 +11,7 @@ WeaponData
 	"anim_prefix"			"anim"
 	"bucket"			"2"
 	"bucket_position"		"8"
-
+	"SpawnAmmo"			"1"
 	"clip_size"			"-1"
 	"clip2_size"			"-1"
 	"default_clip"			"1"
@@ -22,6 +23,10 @@ WeaponData
 	"weight"			"1"
 	"item_flags"			"2"	// ITEM_FLAG_NOAUTORELOAD
 
+	"RespawnTime"		"75"
+	
+	"MaxVelocity"			"1.5"
+	
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{

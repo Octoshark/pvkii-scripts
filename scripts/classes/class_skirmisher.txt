@@ -25,7 +25,6 @@ PlayerClassData
 	"Weapon"
 	{
 		"Name"		"weapon_flintlock"
-		"ExtraAmmo"	"0"
 	}
 	
 	"Weapon"

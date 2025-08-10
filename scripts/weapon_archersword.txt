@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_ArcherSword"
 	"description"	"#ClassMenu_Desc_ArcherSword"
+	"loadoutdesc"	"#Loadout_Desc_archersword"
 	"viewmodel"				"models/weapons/archersword.mdl"
 	"playermodel"			"models/weapons/w_archersword/w_archersword.mdl"
 	"PlayerAnimationExtension"	"cutlass"
@@ -70,6 +71,8 @@ WeaponData
 		// get stunned by bigger weapons.
 		"Weight"		"medium"	
 		
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
 		"ViewEffectScale"	"1.0"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).

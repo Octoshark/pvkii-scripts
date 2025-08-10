@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Halberd"
 	"description"		"#ClassMenu_Desc_Halberd"
+	"loadoutdesc"	"#Loadout_Desc_halberd"
 	"viewmodel"			"models/weapons/halberd.mdl"
 	"playermodel"			"models/weapons/w_halberd/w_halberd.mdl"
 	"PlayerAnimationExtension"	"halberd"
@@ -18,7 +19,7 @@ WeaponData
 	"weight"				"5"
 	"item_flags"			"0"
 
-	"ComboResetTime"		"2.5"
+	
 	
 	"SpecialDamage"			"2.0"	// Fart cloud damage taken every 0.5 seconds
 	"SpecialWarmup"			"1.0"	// Fart cloud special warm up time
@@ -80,8 +81,9 @@ WeaponData
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
 		"Weight"		"medium"
-
-		"ViewEffectScale"	"0.5"
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
+		"ViewEffectScale"	"1.75"
 
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
 		// The damage values for individual hittraces are calculated based on this value in a linear

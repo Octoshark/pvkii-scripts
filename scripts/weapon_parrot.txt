@@ -3,9 +3,12 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_Parrot"
 	"description"	"#ClassMenu_Desc_Parrot"
+	"loadoutdesc"	"#Loadout_Desc_pierre"
 	"viewmodel"				"models/weapons/parrot.mdl"
 	"playermodel"			"models/weapons/w_parrot/w_parrot.mdl"
 	"PlayerAnimationExtension"	"parrot"
+	
+	"SpawnAmmo"			"1"
 	
 	"bucket"			"2"
 	"bucket_position"		"7"

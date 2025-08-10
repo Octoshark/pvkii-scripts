@@ -3,13 +3,17 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_ThrowAxe"
 	"description"		"#ClassMenu_Desc_ThrowAxe"
+	"loadoutdesc"	"#Loadout_Desc_throwaxe"
 	"viewmodel"			"models/weapons/throwingaxe.mdl"
 	"playermodel"			"models/weapons/w_throwingaxe/w_throwingaxe.mdl"
 	"PlayerAnimationExtension"	"throwingaxe"
 	
 	"anim_prefix"			"anim"
 	"bucket"			"2"
+	"bucket2"			"1"
 	"bucket_position"		"10"
+	"AmmoPickup"			"4"
+	"SpawnAmmo"			"4"
 
 	"clip_size"			"-1"
 	"primary_ammo"			"AMMO_AXES"
@@ -19,11 +23,13 @@ WeaponData
 	"item_flags"			"4"
 
 	"damage"			"60"
-                  "HeadshotDamage"		"15"
+	
 	
 	// Projectile settings
 	"Gravity"			"1.0"
 	"MaxVelocity"		"1500"
+	
+	"PlayerSpeedSniper"		"175"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

@@ -3,13 +3,19 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_CrossbowPistol"
 	"description"		"#ClassMenu_Desc_CrossbowPistol"
-	"viewmodel"			"models/weapons/v_crossbow_pistol.mdl"
-	"playermodel"			"models/weapons/w_crossbow_pistol/w_crossbow_pistol.mdl"
+	"loadoutdesc"	"#Loadout_Desc_assbow"
+	"viewmodel"			"models/weapons/crossbow_pistol2.mdl"
+	"playermodel"			"models/weapons/w_crossbow_pistol/w_crossbow_pistol2.mdl"
 	"PlayerAnimationExtension"	"crossbow_pistol"
 	
 	"anim_prefix"			"anim"
 	"bucket"			"1"
 	"bucket_position"		"0"
+	"ReloadFinishTime" "0.8"
+	
+	"AmmoPickup"		"3"
+	"MaxAmmo"			"3"
+	"SpawnAmmo"			"3"
 
 	"clip_size"			"-1"
 	"primary_ammo"			"AMMO_BOLTS_PISTOL"
@@ -18,20 +24,27 @@ WeaponData
 	"weight"				"1"
 	"item_flags"			"6"
 
-	"damage"			"40"
+	"damage"			"55"
 	
 	// Projectile settings
-	"Gravity"			"1.4"
-	"MaxVelocity"		"2600"
+	"Gravity"			"1.15"
+	"MaxVelocity"		"3100"
 	
 	// Player Speed when in sniper mode and reloading
 	"PlayerSpeedSniper"		"160"
-	"PlayerSpeedReload"		"160" // Normal walk speed is usually 210
+	"PlayerSpeedReload"		"120" // Normal walk speed is usually 210
 
-	"ReloadTime"			"1.75" // Time it takes to reload in seconds
+	"ReloadTime" 			"2.75" 
 	
-	"SpecialWeaponDependency"	"weapon_smokebomb"
-
+	// have to do these functions as to avoid modifying the models
+	"ChargeRate"	 	"1" //
+	"MaxChargeTime" 	".223" // 
+	"Spread"			"5" // crosshair reads this as 5 (spread + 1), notify if changed.
+	// this is because it only enjoys intervals of 5s, can be happy with halving that though ( 2.5, 1.25 )
+	
+	"ZoomPercent"		".66"	% of default fov
+	
+	
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{
@@ -76,13 +89,22 @@ WeaponData
 			"width"		"24"
 			"height"	"24"
 		}
+		"aimed"
+		{
+			"file"		"sprites/reticles/dot"
+			"x"			"0"
+			"y"			"0"
+			"width"		"32"
+			"height"	"32"
+		}
 		"crosshair"
 		{
-			"file"		"sprites/crosshairs"
-			"x"			"24"
-			"y"			"-24"
-			"width"		"24"
-			"height"	"72"
+			"file"		"sprites/reticles/tilt"
+			"x"			"0"
+			"y"			"0"
+			"width"		"128"
+			"height"	"128"
 		}
+		
 	}
 }

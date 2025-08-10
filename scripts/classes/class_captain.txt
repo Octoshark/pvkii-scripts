@@ -3,13 +3,13 @@ PlayerClassData
 	"Model"			"models/player/captain/captain.mdl"
 	"GibDir"		"models/player/captain/gibs"
 	
-	"MaxSpeed"		"210"
+	"MaxSpeed"		"220"
 	
 	"MaxHealth"		"125"
 	"SpawnHealth"		"125"
 	
-	"MaxArmor"		"160"
-	"SpawnArmor"		"160"
+	"MaxArmor"		"130"
+	"SpawnArmor"		"130"
 
 	"MaxSpecial"		"210"
 	
@@ -21,12 +21,10 @@ PlayerClassData
 	"Weapon"
 	{
 		"Name"		"weapon_blunderbuss"
-		"ExtraAmmo"	"4"
 	}
 	
 	"Weapon"
 	{
 		"Name"		"weapon_parrot"
-		"ExtraAmmo"	"1"
 	}
 }

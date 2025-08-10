@@ -3,12 +3,14 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_AxeSword"
 	"description"		"#ClassMenu_Desc_AxeSword"
+	"loadoutdesc"	"#Loadout_Desc_axesword"
 	"viewmodel"			"models/weapons/axesword.mdl"
 	"playermodel"			"models/weapons/w_swordaxe/w_swordaxe.mdl"
 	"PlayerAnimationExtension"	"swordaxe"
 	
 	"anim_prefix"			"anim"
 	"bucket"			"1"
+	"bucket2"			"0"
 	"bucket_position"		"1"
 
 	"clip_size"				"-1"
@@ -18,12 +20,14 @@ WeaponData
 	"weight"				"1"
 	"item_flags"			"0"
 
-	"ComboResetTime"		"1.5"
+	"SpecialLimit"		"6"
+	"ChargeDecayTime"		"4"
 	
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{
 		"single_shot"		"Weapon_AxeSword"
+		"double_shot"		"Weapon_Cutlass.Single"
 		"melee_hit"		"Weapon_Crowbar.Melee_Hit"
 		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
 		"draw"			"Weapon_AxeSword.Draw"
@@ -66,14 +70,16 @@ WeaponData
 	
 	MeleeWeaponData
 	{
-		"Range"				"45"	// The maximum range this weapon can reach in hl2 units
-		"FireRate"			"0.8"	// Length of the attack animation in seconds
+		"Range"				"53"	// The maximum range this weapon can reach in hl2 units
+		"FireRate"			"1.0"	// Length of the attack animation in seconds
 		
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
 		"AttackWeight"		"small"	
 		"ParryWeight"		"medium"
 		
+		"ComboTime"			"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
 		"ViewEffectScale"	"0.0"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
@@ -84,12 +90,6 @@ WeaponData
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
 		"TotalDamage"		"27"
-		
-			// These multipliers can be used to fine tune the speeds of different parts of the attack.
-		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.
-		"StartAttackSpeed"	"1.0"	// 1
-		"SwingSpeed"		"1.0"	// 2
-		"AttackSpeed"		"1.0"	// 2 and 3
 		
 		"forward"
 		{
@@ -107,7 +107,7 @@ WeaponData
 			"TraceStart"		"0.09"
 			"TraceEnd"			"0.17"
 			"TraceDir"			"forward"
-			"DamageMultiplier"	"1.33"
+			"DamageMultiplier"	"1.0"
 			"StartActivity"		"ACT_VM_ATTACK_BACK_START"
 			"StartDuration"		"0.27"
 			"Activity"			"ACT_VM_ATTACK_BACK"
@@ -138,8 +138,8 @@ WeaponData
 		
 		"blockatk_forward"
 		{
-			"TraceStart"		"0.33"
-			"TraceEnd"			"0.50"
+			"TraceStart"		"0.12"
+			"TraceEnd"			"0.25"
 			"TraceDir"			"forward"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_FORWARD"
@@ -148,9 +148,9 @@ WeaponData
 		
 		"blockatk_back"
 		{
-			"TraceStart"		"0.33"
-			"TraceEnd"			"0.50"
-			"TraceDir"			"back"
+			"TraceStart"		"0.12"
+			"TraceEnd"			"0.25"
+			"TraceDir"			"left"
 			"DamageMultiplier"	"1.0"
 			"Activity"			"ACT_VM_BLOCKATK_BACK"
 			"Duration"			"0.8"
@@ -158,21 +158,21 @@ WeaponData
 		
 		"blockatk_left"
 		{
-			"TraceStart"		"0.33"
-			"TraceEnd"			"0.50"
-			"TraceDir"			"left"
+			"TraceStart"		"0.12"
+			"TraceEnd"			"0.25"
+			"TraceDir"			"forward"
 			"DamageMultiplier"	"1.0"
-			"Activity"			"ACT_VM_BLOCKATK_LEFT"
+			"Activity"			"ACT_VM_BLOCKATK_RIGHT"
 			"Duration"			"0.8"
 		}
 		
 		"blockatk_right"
 		{
-			"TraceStart"		"0.33"
-			"TraceEnd"			"0.50"
-			"TraceDir"			"right"
+			"TraceStart"		"0.12"
+			"TraceEnd"			"0.25"
+			"TraceDir"			"forward"
 			"DamageMultiplier"	"1.0"
-			"Activity"			"ACT_VM_BLOCKATK_RIGHT"
+			"Activity"			"ACT_VM_BLOCKATK_LEFT"
 			"Duration"			"0.8"
 		}
 	}

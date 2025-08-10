@@ -26,6 +26,5 @@ PlayerClassData
 	"Weapon"
 	{
 		"Name"		"weapon_throwaxe"
-		"ExtraAmmo"	"4"
 	}
 }

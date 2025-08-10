@@ -3,13 +3,18 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_SniperPistol"
 	"description"		"#ClassMenu_Desc_SniperPistol"
+	"loadoutdesc"	"#Loadout_Desc_artisan"
 	"viewmodel"			"models/weapons/sspistol.mdl"
 	"playermodel"			"models/weapons/w_sspistol/w_sspistol.mdl"
 	"PlayerAnimationExtension"	"sspistol"
 
 	"anim_prefix"			"anim"
 	"bucket"			"1"
-	"bucket_position"		"11"
+	"bucket2"			"0"
+	"bucket_position"		"11"	
+	"AmmoPickup"		"10"
+	"SpawnAmmo"		"15"
+	"ReloadFinishTime"			".95"
 
 	"clip_size"				"-1"
 	"primary_ammo"			"AMMO_FLINTLOCK_SNIPER"
@@ -18,22 +23,24 @@ WeaponData
 	"weight"				"2"
 	"item_flags"			"6"
 
-	"damage"			"45"
 	
-	"falloff"		"1" 			// boolean to enable falloff
+	"damage"			"45" // base damage
+	"spread"			"10" // spread of pistols at 0 charge 
+	"MinSpread"			"0" // spread of pistols at full charge 
 	
-	"MaxFalloffDistance" 	"500"	// Maximum distance for the minimum damage to be achieved with falloff
-	"MinFalloffDistance"	"200"	// Minimum distance for the maximum damage to be achieved with falloff
-	"MaxFalloffDistanceAimed" 	"10000"	// Maximum distance for the minimum damage to be achieved with falloff when aimed
-	"MinFalloffDistanceAimed"	"5000"	// Minimum distance for the maximum damage to be achieved with falloff when aimed
+	// have to do these functions as to avoid modifying the models
+	"ChargeRate"	 	"1" // ( .25 (desired ads time) / ( 15 (ads frames) / 40 (fps) ) )
+	"MaxChargeTime" 	".223" // ENSURE THIS VALUE MATCHES DESIRED ADS TIME
 	
-	"MinimumDamageFalloff"	"15"	// Minimum damage multiplier with falloff
+	"CycleTime"			"2.0" // firerate
 	
-	"BulletSpeed"		"6000"
-	"BulletDrop"		"40"
+	"ZoomPercent"		"1" //	no zoom
+	
 
 	"Knockback"		"0"
-	"AuxKnockback"		".45"
+	"AuxKnockback"		"50"
+	
+	"PlayerSpeedSniper"		"120"
 	
 	"SpecialWeaponDependency"	"weapon_powderhorn"
 
@@ -42,6 +49,7 @@ WeaponData
 	{
 		"single_shot"		"Weapon_SSFlintlock.Single"
 		"reload"		"Weapon_SSFlintlock.Reload"
+		"reload_npc"		 "Weapon_SSFlintlock.FastReload"
 		"melee_hit"		"Weapon_Crowbar.Melee_Hit"
 		"melee_hit_world"	"Weapon_Crowbar.Melee_HitWorld"
 		"draw"			"Weapon_Flintlock.Draw"
@@ -83,13 +91,22 @@ WeaponData
 			"width"		"128"
 			"height"	"128"
 		}
-				"crosshair"
+		
+		"aimed"
 		{
-			"file"		"sprites/crosshairs"
+			"file"		"sprites/reticles/dot"
 			"x"			"0"
 			"y"			"0"
-			"width"		"24"
-			"height"	"24"
+			"width"		"32"
+			"height"	"32"
+		}
+		"crosshair"
+		{
+			"file"		"sprites/reticles/ring"
+			"x"			"0"
+			"y"			"0"
+			"width"		"128"
+			"height"	"128"
 		}
 	}
 }

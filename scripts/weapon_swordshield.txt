@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_SwordShield"
 	"description"	"#ClassMenu_Desc_SwordShield"
+	"loadoutdesc"	"#Loadout_Desc_heater"
 	"viewmodel"				"models/weapons/swordshield.mdl"
 	"playermodel"			"models/weapons/w_swordshield/w_swordshield.mdl"
 	"PlayerAnimationExtension"	"swordshield"
@@ -68,15 +69,17 @@ WeaponData
 	MeleeWeaponData
 	{
 		"Range" 			"60"	// The maximum range this weapon can reach in hl2 units
-		"ShieldRange"		"55"	// The maximum range this shield can reach in hl2 units
+		"ShieldRange"		"45"	// The maximum range this shield can reach in hl2 units
 		"FireRate"			"0.58"	// Length of the attack animation in seconds
-		"BashDamage"		"10"	// Base shield bash damage
-		"BashAttackWeight"	"large"
+		"BashDamage"		"10"	// Base shield bash damage 
+		"BashSpeedupMult"	"2"	// Multiplier for the attack that follows a bash
 		
 		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
 		// get stunned by bigger weapons.
 		"Weight"		"medium"
 		
+		"ComboTime"	"medium"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+	
 		"ViewEffectScale"	"1.0"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
@@ -86,7 +89,7 @@ WeaponData
 		
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
-		"TotalDamage"		"46" 
+		"TotalDamage"		"42" 
 		
 		// Shield hitpoints
 		"ShieldStrength"	"350"

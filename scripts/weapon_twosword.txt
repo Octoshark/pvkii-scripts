@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_2hsword"
 	"description"	"#ClassMenu_Desc_2hsword"
+	"loadoutdesc"	"#Loadout_Desc_2hsword"
 	"viewmodel"				"models/weapons/2hsword.mdl"
 	"playermodel"			"models/weapons/w_2hsword/w_2hsword.mdl"
 	"PlayerAnimationExtension"	"2hsword"
@@ -18,10 +19,10 @@ WeaponData
 	"weight"				"3"
 	"item_flags"			"0"
 	
-	"ComboResetTime"		"2.5"
 	
-	"SpecialQuotaPercentage"	".66"
-	"SpecialDamage"			"28" // * 7
+	
+	"SpecialQuotaPercentage"	".6"
+	"SpecialDamage"			"15" // * 7
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -75,10 +76,8 @@ WeaponData
 		
 		"ViewEffectScale"	"3.0"
 		
-		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
-		// get stunned by bigger weapons.
-		"Weight"		"large"
-		
+		"Weight"		"large"			
+		"ComboTime"	"large"  
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
 		// The damage values for individual hittraces are calculated based on this value in a linear
 		// manner, the first and last hittraces deal the least damage, while the middle hittrace
@@ -88,15 +87,12 @@ WeaponData
 		// maximum damage by 20%
 		"TotalDamage"		"77" 
 
-		// Damage multiplier on maximum charge
-		"MaxChargeBonus"	"1.42"
-
-		"MaxChargeTime"		"1.7"
+		"ChargeStyle"		"slow" // type of charge. ( quick, normal, slow, strong)
 
 		// These multipliers can be used to fine tune the speeds of different parts of the attack.
 		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.
 		"StartAttackSpeed"	"0.85"	// 1
-		"SwingSpeed"		"1.67"	// 2
+		"SwingSpeed"		"1.45"	// 2
 		"AttackSpeed"		"0.85"	// 2 and 3
 		
 		"forward"

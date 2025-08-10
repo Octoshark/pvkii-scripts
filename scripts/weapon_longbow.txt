@@ -3,28 +3,39 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Longbow"
 	"description"		"#ClassMenu_Desc_Longbow"
+	"loadoutdesc"	"#Loadout_Desc_longbow"
 	"viewmodel"			"models/weapons/longbow.mdl"
 	"playermodel"			"models/weapons/w_longbow/w_longbow.mdl"
 	"PlayerAnimationExtension"	"bow"
 	
 	"anim_prefix"			"anim"
 	"bucket"			"2"
-	"bucket_position"		"6"
+	"bucket2"			"0"
+	"bucket_position"		"6"	
+	"AmmoPickup"		"10"
 
+	"AutoSwitchFrom"		"0"
+	"SpawnAmmo"			"15"
+	"MaxAmmo"			"20"
 	"clip_size"			"-1"
 	"primary_ammo"			"AMMO_ARROWS"
 	"secondary_ammo"		"None"
 
 	"weight"				"5"
-	"item_flags"			"4"
+	"item_flags"			"11"
 
 	"damage"			"80"
-	"SpecialDamage"			"40" // * 3
+	"SpecialDamage"			"120" // * 4
+	"SpecialSmallDamage"		"45"
 	
 	// Projectile settings
 	"Gravity"			"0.9"
 	"MaxVelocity"		"2500"
-
+	//"Knockback"			"300" // handled in special script now 
+	
+	"PlayerSpeedSpecial"		"120"
+	"PlayerSpeedSniper"			"180"
+	
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{

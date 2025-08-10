@@ -3,32 +3,37 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_Caltrops"
 	"description"		"#ClassMenu_Desc_Caltrops"
-	"viewmodel"				"models/weapons/v_caltrops.mdl"
+	"loadoutdesc"	"#Loadout_Desc_gumdrops"
+	"viewmodel"				"models/weapons/caltropsmokebomb.mdl"
 	"playermodel"			"models/weapons/w_assassin_bag/w_assassin_bag.mdl"
 	"PlayerAnimationExtension"	"caltrops"
 	
 	"anim_prefix"			"anim"
 	"bucket"			"2"
 	"bucket_position"		"0"
+	"DeployDelay" 			".25"
 
+	"SpawnAmmo"			"1"
+	"SpawnAmmoSecondary"			"1"
+	"SecondaryAmmoPickup"			"1"
 	"clip_size"				"-1"
 	"clip2_size"			"-1"
 	"default_clip"			"1"
 	"default_clip2"			"-1"
 
 	"primary_ammo"			"AMMO_CALTROPS"
-	"secondary_ammo"		"None"
+	"secondary_ammo"		"AMMO_SMOKEBOMB"
 	
 	"damage"			"3"
 
 	"weight"			"0"
-	"item_flags"			"2"	// ITEM_FLAG_NOAUTORELOAD
+	"item_flags"			"2"
 
+	"RespawnTime"		"30"
 	// Projectile settings
 	"Gravity" 		"3"
-	"MaxVelocity"		"1500"
-	
-	"SpecialWeaponDependency"	"weapon_smokebomb"
+	"MaxVelocity"		"1000"
+	"ReloadTime"		".25"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -52,6 +57,14 @@ WeaponData
 		"weapon_s"
 		{
 				"file"		"HUD/caltrops"
+				"x"		"0"
+				"y"		"0"
+				"width"		"256"
+				"height"	"256"
+		}
+		"weapon_s2"
+		{
+				"file"		"HUD/smokebomb"
 				"x"		"0"
 				"y"		"0"
 				"width"		"256"

@@ -1,6 +1,8 @@
 ScriptableData
 {
 	"SpecialDamage"            	"115" // damage of the powderhorn
-    "SpecialVelocity"        "700" // maximum velocity achieved with charge m_iSpecialMaxVelocity
+	"SmallSpecialDamage"        "115" // damage of the powderhorn
+    "SpecialVelocity"      		"700" // maximum velocity achieved with charge m_iSpecialMaxVelocity
 	"SpecialRange"				"192" // radius of the explosion
+	"SpecialSmallRange"			"130" // radius of the explosion
 }

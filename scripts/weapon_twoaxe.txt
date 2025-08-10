@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_TwoAxe"
 	"description"	"#ClassMenu_Desc_TwoAxe"
+	"loadoutdesc"	"#Loadout_Desc_2haxe"
 	"viewmodel"				"models/weapons/2haxe.mdl"
 	"playermodel"			"models/weapons/w_2haxe/W_2haxe.mdl"
 	"PlayerAnimationExtension"	"2haxe"
@@ -18,7 +19,7 @@ WeaponData
 	"weight"				"3"
 	"item_flags"			"0"
 
-	"ComboResetTime"		"2.5"
+	
 	
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -68,11 +69,10 @@ WeaponData
 	{
 		"Range"				"63"	// The maximum range this weapon can reach in hl2 units
 
-		// The weapon's weight is mostly used in blocking calculations, players with smaller weapons
-		// get stunned by bigger weapons.
-		"Weight"		"large"
-		
-		"ViewEffectScale"	"2.5"
+
+		"Weight"		"large"			
+		"ComboTime"	"large"  
+		"ViewEffectScale"	"2.25"
 		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
 		// The damage values for individual hittraces are calculated based on this value in a linear

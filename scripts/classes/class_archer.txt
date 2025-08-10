@@ -21,12 +21,10 @@ PlayerClassData
 	"Weapon"
 	{
 		"Name"		"weapon_crossbow"
-		"ExtraAmmo"	"5"
 	}
 	
 	"Weapon"
 	{
 		"Name"		"weapon_longbow"
-		"ExtraAmmo"	"20"
 	}
 }

@@ -3,38 +3,56 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_flatbow"
 	"description"		"#ClassMenu_Desc_flatbow"
+	"loadoutdesc"	"#Loadout_Desc_flatbow"
 	"viewmodel"			"models/weapons/v_flatbow.mdl"
 	"playermodel"			"models/weapons/w_flatbow/w_flatbow.mdl"
 	"PlayerAnimationExtension"	"flatbow"
 	
 	"anim_prefix"			"anim"
 	"bucket"				"2"
-	"bucket_position"		"3"	
-	"DeployDelay"			"0.25"
+	"bucket2"				"0"
+	"bucket_position"		"3"		
+	
+	"AutoSwitchFrom"		"0"
+	"SpawnAmmo"			"14"
+	"AmmoPickup"		"14"
+	"MaxAmmo"			"28"
 
-
-	"clip_size"				"-1"
+	"AutoSwitchFrom"		"0"
+	"clip_size"				"4"
 	"primary_ammo"			"AMMO_FLATBOWARROWS"
 	"secondary_ammo"		"None"
 
 	"weight"				"5"
-	"item_flags"			"4"
+	"item_flags"			"11"
 
-	"damage"		                  "53"
+	"damage"		                  "57"
 	
 	// Projectile settings
 	"Gravity"		"1.8"
 	"MaxVelocity"		"2455"
 
-	"ChargeRate"		"1.2" // Multiplier for how fast charging occurs. (Default 1.0)
-	"MaxChargeTime"		"1.7" // Maximum time you can charge. This factors in to how long you can hold a fully charged shot. (Default 2.0)
-	"ChargeDecayTime"	"5.0" // How many seconds does it take to fully decay the charge meter. (Default 8.0)
+	"CycleTime"				".2"	// clip firing
+	"ReloadTime"		".4" 
+	"ReloadFinishTime"		".4" 
+
+	"ChargeRate"		"1.5" // Multiplier for how fast charging occurs. (Default 1.0)
+	"MaxChargeTime"		"1.5" // Maximum time you can charge. This factors in to how long you can hold a fully charged shot. (Default 2.0)
+	"ChargeDecayTime"	"2.50" // How many seconds does it take to fully decay the charge meter. (Default 8.0)
+
+	"PlayerSpeedSniper"		"180"
+	"PlayerSpeedReload"		"200"
+	
+	"SpecialDamage"			"50"
+	
+	"SpecialDuration"			"7.50" // Time special is active for
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
 	{
 		"single_shot"		"Weapon_BondiBow.Pullback"
 		"reload"		"Weapon_BondiBow.Shoot"
+		"reload_npc"		"Weapon_BondiBow.Reload"
 		"draw"			"Weapon_BondiBow.Draw"
 		"holster"		"Weapon_BondiBow.Holster"
 	}
@@ -60,7 +78,7 @@ WeaponData
 		}
 		"ammo"
 		{
-				"file"		"HUD/flatbowammo"
+				"file"		"HUD/flatbow2"
 				"x"		"0"
 				"y"		"0"
 				"width"		"128"
@@ -68,11 +86,12 @@ WeaponData
 		}
 		"ammo2"
 		{
-			"file"		"sprites/640hud7"
-			"x"			"48"
-			"y"			"72"
-			"width"		"24"
-			"height"	"24"
+			
+				"file"		"HUD/flatbowammo"
+				"x"		"0"
+				"y"		"0"
+				"width"		"128"
+				"height"	"128"
 		}
 		"crosshair"
 		{

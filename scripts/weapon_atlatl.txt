@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"			"#ClassMenu_atlatl"
 	"description"		"#ClassMenu_Desc_atlatl"
+	"loadoutdesc"	"#Loadout_Desc_atlatl"
 	"viewmodel"			"models/weapons/atlatl.mdl"
 	"playermodel"			"models/weapons/w_atlatl/w_atlatl.mdl"
 	"PlayerAnimationExtension"	"atlatl"
@@ -10,8 +11,9 @@ WeaponData
 	"anim_prefix"			"anim"
 	"bucket"			"1"
 	"bucket_position"		"0"
-	"DeployDelay"			"0.33"
-
+	
+	"SpawnAmmo"			"2"
+	"AmmoPickup"			"2"
 
 	"clip_size"			"-1"
 	"primary_ammo"			"AMMO_ATLATL"
@@ -27,11 +29,15 @@ WeaponData
 	// Projectile settings
 	"Gravity"			"1.1"
 	"MaxVelocity"		"3000"
-
+	
+	"Knockback"			"200"
+	
+	"PlayerSpeedSniper"  "100"
+	"ZoomPercent"		".7"	% of default fov
 	"ChargeRate"			"2.8" // Multiplier for how fast charging occurs. (Default 1.0)
-	"MaxChargeTime"			"3" // Maximum time you can charge. This factors in to how long you can hold a fully charged shot. (Default 2.0)
-	"ChargeDecayTime"		"2" // How many seconds does it take to fully decay the charge meter. (Default 8.0)
-	"ChargeFactor"			".35"	// How much slower the ADS fire charges.
+	"MaxChargeTime"			"1.85" // Maximum time you can charge. This factors in to how long you can hold a fully charged shot. (Default 2.0)
+	"ChargeDecayTime"		".75" // How many seconds does it take to fully decay the charge meter. (Default 8.0)
+	"ChargeFactor"			".275"	// How much slower the ADS fire charges.
 	
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData

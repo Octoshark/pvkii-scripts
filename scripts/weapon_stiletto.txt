@@ -3,6 +3,7 @@ WeaponData
 	// Weapon data is loaded by both the Game and Client DLLs.
 	"printname"	"#ClassMenu_Stiletto"
 	"description"	"#ClassMenu_Desc_Stiletto"
+	"loadoutdesc"	"#Loadout_Desc_stiletto"
 	"viewmodel"				"models/weapons/stiletto.mdl"
 	"playermodel"			"models/weapons/w_stiletto/w_stilettoandparryingdagger.mdl"
 	"PlayerAnimationExtension"	"stiletto"
@@ -19,11 +20,12 @@ WeaponData
 	"item_flags"			"0"
 	
 	"PlayerSpeedSpecial"	"260"
-	"SpecialDamage"		"105"
-	"BackstabMinDamage" "55"
+	"BackstabMinDamage" "50"
 	"BackstabMaxDamage" "85"
 	
-	"SpecialWeaponDependency"	"weapon_smokebomb"
+	"PullForce"			"75" // special hit push-away
+	"PushForce"			"120"  // special hit push-upwards
+	
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -71,19 +73,21 @@ WeaponData
 	
 	MeleeWeaponData
 	{
-		"Range"				"48"	
+		"Range"				"50"	
 		"AttackWeight"		"small"	
 		"ParryWeight"		"medium"
 		
-		"ViewEffectScale"	"1.0"
-		"TotalDamage"		"46" 
+		"ComboTime"	"small"  // Time before the combo begins to decay (in seconds, small = 1.5, medium = 2.0, large = 2.5)
+		
+			
+		"ViewEffectScale"	"0.5"
+		"TotalDamage"		"42" 
 
-		"MaxChargeTime"		"1"
-		"ChargeCycleTime"	"4"
+		"ChargeStyle"		"quick" // type of charge. ( quick, normal, strong)
 
-		"StartAttackSpeed"	"1.0"	// 1
+		"StartAttackSpeed"	".8"	// 1
 		"SwingSpeed"		"0.9"	// 2
-		"AttackSpeed"		"1.25"	// 2 and 3
+		"AttackSpeed"		"1.15"	// 2 and 3
 		
 		
 		"forward"
