@@ -74,8 +74,6 @@ WeaponData
 		"ComboTime"	"large"
 		"ViewEffectScale"	"2.5"
 		
-		"ChargeStyle"		"slow" // type of charge. ( quick, normal, slow, strong)
-		
 		// The maximum damage the weapon can deal if all hittraces hit the target (which is rare).
 		// The damage values for individual hittraces are calculated based on this value in a linear
 		// manner, the first and last hittraces deal the least damage, while the middle hittrace
@@ -85,7 +83,8 @@ WeaponData
 		// maximum damage by 20%
 		"TotalDamage"		"71" 
 
-		
+		"ChargeStyle"		"slow" // type of charge. ( quick, normal, slow, strong)
+
 		
 		// These multipliers can be used to fine tune the speeds of different parts of the attack.
 		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.

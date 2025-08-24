@@ -6,6 +6,7 @@ WeaponData
 	"loadoutdesc"	"#Loadout_Desc_skirmcutlass"
 	"viewmodel"				"models/weapons/cutlass2.mdl"
 	"viewmodel2"				"models/weapons/cutlass_gun.mdl"
+	"viewmodel3"				"models/weaponsalt/cutlass_dragon.mdl"
 	"playermodel"			"models/weapons/w_cutlass2/w_cutlass2_gun.mdl"
 	"PlayerAnimationExtension"	"cutlassgun"
 	"PlayerAnimationExtensionAlternate"	"cutlass"
@@ -23,7 +24,9 @@ WeaponData
 	
 	"SpecialQuotaPercentage"	".33"
 	"SpecialDamage"			"18" // * 11
-	
+
+
+	"SpecialWarmupTime"				".05" // time before allowing for a shot 
 	"PlayerSpeedSpecial"			".35" // minimum speed mult after the lunge ends, scales to 1.0 at the end of duration
 	"SpecialDuration"				".25" // time that youre slowed down for after the lunge ends
 

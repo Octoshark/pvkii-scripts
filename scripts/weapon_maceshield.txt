@@ -94,6 +94,7 @@ WeaponData
 		// Also note that charging the attack (holding the attack for 1 second) increases the 
 		// maximum damage by 20%
 		"TotalDamage"		"46"
+		"ChargeStyle"		"slow" // type of charge. ( quick, normal, slow, strong)
 
 		// These multipliers can be used to fine tune the speeds of different parts of the attack.
 		// A melee attack consists of 3 parts: 1 - charge, 2 - swing, 3 - recovery.

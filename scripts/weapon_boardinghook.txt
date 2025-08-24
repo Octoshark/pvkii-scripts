@@ -24,7 +24,7 @@ WeaponData
 	// Projectile settings
 	"Gravity"			"1.15"
 	"MaxVelocity"		"1850"
-	"RespawnTime" 		"20"
+	"RespawnTime" 		"40"
 	
 	"Knockback"	"75"
 	"AuxKnockback" 	"200"

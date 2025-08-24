@@ -69,7 +69,7 @@ WeaponData
 	
 	MeleeWeaponData
 	{
-		"Range"				"50"	// The maximum range this weapon can reach in hl2 units
+		"Range"				"55"	// The maximum range this weapon can reach in hl2 units
 		"ShieldRange"		"45"	// The maximum range this shield can reach in hl2 units
 		"FireRate"			"0.58"	// Length of the attack animation in seconds
 		"BashDamage"		"10"	// Base damage for shield bashes

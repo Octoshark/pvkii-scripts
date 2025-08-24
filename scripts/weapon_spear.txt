@@ -21,7 +21,7 @@ WeaponData
 
 
 	"SpecialQuotaPercentage"	".25"
-	"SpecialDamage"			"24"
+	"SpecialDamage"			"30"
 
 	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
 	SoundData
@@ -101,6 +101,9 @@ WeaponData
 			"StartDuration"		"0.46"
 			"Activity"			"ACT_VM_ATTACK_FORWARD"
 			"Duration"			"0.9"
+			
+			"OverchargeStartActivity"		"ACT_VM_PWRATTACK_FORWARD_IDLE"
+			"OverchargeActivity"			"ACT_VM_PWRATTACK_FORWARD"
 		}
 		
 		"back"
@@ -113,6 +116,8 @@ WeaponData
 			"StartDuration"		"0.46"
 			"Activity"			"ACT_VM_ATTACK_BACK"
 			"Duration"			"0.9"
+			"OverchargeStartActivity"		"ACT_VM_PWRATTACK_BACK_IDLE"
+			"OverchargeActivity"			"ACT_VM_PWRATTACK_BACK"
 		}
 		
 		"left"
@@ -125,6 +130,8 @@ WeaponData
 			"StartDuration"		"0.37"
 			"Activity"			"ACT_VM_ATTACK_LEFT"
 			"Duration"			"0.6"
+			"OverchargeStartActivity"		"ACT_VM_PWRATTACK_LEFT_IDLE"
+			"OverchargeActivity"			"ACT_VM_PWRATTACK_LEFT"
 		}
 		
 		"right"
@@ -137,6 +144,8 @@ WeaponData
 			"StartDuration"		"0.37"
 			"Activity"			"ACT_VM_ATTACK_RIGHT"
 			"Duration"			"0.6"
+			"OverchargeStartActivity"		"ACT_VM_PWRATTACK_RIGHT_IDLE"
+			"OverchargeActivity"			"ACT_VM_PWRATTACK_RIGHT"
 		}
 		
 		"blockatk_forward"

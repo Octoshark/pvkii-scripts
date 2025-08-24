@@ -1,7 +1,7 @@
 ScriptableData
 {
 	"Gravity"			"0.9"
-	"Velocity"		"2000"
+	"Velocity"		"2500"
 	"Knockback"			"250" // max knockback 
 	"MaxDamage"			"120" // max damage achieved with all arrows 
 	"Damage"		"45" // damage per arrow
